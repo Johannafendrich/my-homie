@@ -21,9 +21,6 @@
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
