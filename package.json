@@ -1,8 +1,7 @@
 {
   "name": "my-homie",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "heroku-prebuild": "cd client && yarn install",
     "client": "cd client && yarn start",
@@ -17,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/Johannafendrich/my-homie.git"
   },
-  "author": "",
+  "author": "Johanna Fendrich",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Johannafendrich/my-homie/issues"
