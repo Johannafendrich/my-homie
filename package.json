@@ -17,7 +17,7 @@
     "url": "git+https://github.com/Johannafendrich/my-homie.git"
   },
   "author": "Johanna Fendrich",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Johannafendrich/my-homie/issues"
   },
