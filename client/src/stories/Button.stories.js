@@ -9,7 +9,7 @@ export const loginButton = () => (
   <Button onClick={action('link to Login')}>Login</Button>
 );
 
-export const createButton = () => (
+export const createAccountButton = () => (
   <Button onClick={action('link to Account')}>Create account</Button>
 );
 
