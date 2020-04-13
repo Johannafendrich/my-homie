@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.5" height="20.5" viewBox="0 0 20.5 20.5">
+  <g id="Group_234" data-name="Group 234" transform="translate(-43.5 -352.5)">
+    <path id="md-calendar" d="M8.139,7.111V3m8.222,4.111V3M5.056,21.5H19.444A2.056,2.056,0,0,0,21.5,19.444V7.111a2.056,2.056,0,0,0-2.056-2.056H5.056A2.056,2.056,0,0,0,3,7.111V19.444A2.056,2.056,0,0,0,5.056,21.5Z" transform="translate(41.5 350.5)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="md-cheveron-up" d="M5,10.187,7.187,8l2.187,2.187" transform="translate(46.5 353)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+    <path id="md-cheveron-up-2" data-name="md-cheveron-up" d="M0,2.187,2.187,0,4.375,2.187" transform="translate(55.875 367.25) rotate(180)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+  </g>
+</svg>
