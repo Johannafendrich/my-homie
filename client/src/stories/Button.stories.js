@@ -1,22 +1,12 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import Button from '../components/Button';
+import { Button, ButtonSize } from '../components/Button';
 import { action } from '@storybook/addon-actions';
-
-const ButtonSize = styled.div`
-  display: flex;
-  justify-content: center;
-  > * {
-    flex-basis: 50%;
-  }
-`;
-
 export default {
   title: 'Buttons',
 };
 export const loginButton = () => (
   <ButtonSize>
-    <Button onClick={action('link to Login')}>Login</Button>
+    <Button onClick={action('Welcome')}>Login</Button>
   </ButtonSize>
 );
 
@@ -40,6 +30,6 @@ export const submitButton = () => (
 
 export const addHomieButton = () => (
   <ButtonSize>
-    <Button onClick={action('clicked')}>Add as Homie</Button>
+    <Button onClick={action('Homie added')}>Add as Homie</Button>
   </ButtonSize>
 );
