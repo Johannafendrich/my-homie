@@ -5,6 +5,6 @@ export default {
   title: 'LoginInputForm',
 };
 
-export const Login = () => {
+export const LoginForm = () => {
   return <LoginInputForm />;
 };
