@@ -9,7 +9,7 @@ const Logo = styled.img`
   width: 170px;
   align-self: center;
 `;
-const littleLogo = styled.img`
+const LittleLogo = styled.img`
   width: 65px;
   align-self: center;
 `;
@@ -28,7 +28,7 @@ export function CologneLogo(props) {
 }
 
 export function smallLogo(props) {
-  return <littleLogo src={horizontalLogo} alt="Logo" {...props} />;
+  return <LittleLogo src={horizontalLogo} alt="Logo" {...props} />;
 }
 
 export function IconLogo(props) {
