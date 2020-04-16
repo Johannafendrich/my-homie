@@ -30,10 +30,8 @@ export const InputContainer = styled.div`
 const InputField = (props) => <Input {...props} />;
 
 InputField.propTypes = {
-  inputType: PropTypes.oneOf(['text', 'number', 'password', 'email', 'date'])
-    .isRequired,
-  controlFunc: PropTypes.func.isRequired,
-  value: PropTypes.any,
+  inputType: PropTypes.oneOf(['text', 'number', 'password', 'email']),
+  //   controlFunc: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
 };
 
