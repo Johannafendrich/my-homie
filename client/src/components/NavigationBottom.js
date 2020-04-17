@@ -26,7 +26,6 @@ const NavItem = styled.li`
   max-width: 160px;
   padding: 6px 12px 8px;
   cursor: pointer;
-  fill: ${(props) => (props.active ? '#F2D22E' : '#F2D22E')};
 `;
 
 function NavigationBottom({ links, active, onItemClick }) {
