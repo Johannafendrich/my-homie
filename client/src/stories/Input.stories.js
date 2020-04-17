@@ -16,14 +16,14 @@ export default {
 
 export const mailInput = () => (
   <InputContainer>
-    <img src={EmailAtIcon} alt="email" />
+    <img src={EmailAtIcon} />
     <InputField type="email" placeholder="E-mail" onChange={action('write')} />
   </InputContainer>
 );
 
 export const passwordInput = () => (
   <InputContainer>
-    <img src={PasswordIcon} alt="password" />
+    <img src={PasswordIcon} />
     <InputField
       type="password"
       placeholder="Password"
@@ -34,14 +34,14 @@ export const passwordInput = () => (
 
 export const userNameInput = () => (
   <InputContainer>
-    <img src={UserIcon} alt="name" />
+    <img src={UserIcon} />
     <InputField type="text" placeholder="Name" onChange={action('write')} />
   </InputContainer>
 );
 
 export const locationInput = () => (
   <InputContainer>
-    <img src={LocationIcon} alt="City" />
+    <img src={LocationIcon} />
     <InputField
       type="text"
       placeholder="City, country"
@@ -52,7 +52,7 @@ export const locationInput = () => (
 
 export const ageInput = () => (
   <InputContainer>
-    <img src={AgeIcon} alt="Age" />
+    <img src={AgeIcon} />
     <InputField
       type="number"
       placeholder="Date of birth"
@@ -63,7 +63,7 @@ export const ageInput = () => (
 
 export const numberOfGuestsInput = () => (
   <InputContainer>
-    <img src={UserGroupIcon} alt="number of guests" />
+    <img src={UserGroupIcon} />
     <InputField
       type="number"
       min="0"
@@ -75,7 +75,7 @@ export const numberOfGuestsInput = () => (
 
 export const phoneContactInput = () => (
   <InputContainer>
-    <img src={PhoneIcon} alt="phone number" />
+    <img src={PhoneIcon} />
     <InputField
       type="number"
       min="0"
@@ -87,7 +87,7 @@ export const phoneContactInput = () => (
 
 export const mailContactInput = () => (
   <InputContainer>
-    <img src={EmailIcon} alt="email" />
+    <img src={EmailIcon} />
     <InputField type="email" placeholder="E-mail" onChange={action('write')} />
   </InputContainer>
 );
