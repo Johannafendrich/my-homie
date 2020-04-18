@@ -27,12 +27,20 @@ export const InputContainer = styled.div`
   outline: none;
 `;
 
-const InputField = (props) => <Input {...props} />;
+const InputField = ({ type, placeholder, value, src }) => {
+  return (
+    <InputContainer>
+      <img src={src} />
+      <Input type={type} placeholder={placeholder} value={value} />
+    </InputContainer>
+  );
+};
 
 InputField.propTypes = {
-  inputType: PropTypes.oneOf(['text', 'number', 'password', 'email']),
-  //   controlFunc: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  src: PropTypes.any,
 };
 
 export default InputField;

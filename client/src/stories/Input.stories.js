@@ -1,5 +1,5 @@
 import React from 'react';
-import InputField, { InputContainer } from '../components/Input';
+import InputField from '../components/Input';
 import EmailAtIcon from '../assets/email-at.svg';
 import PasswordIcon from '../assets/password.svg';
 import UserIcon from '../assets/user.svg';
@@ -8,86 +8,98 @@ import AgeIcon from '../assets/age.svg';
 import EmailIcon from '../assets/email.svg';
 import PhoneIcon from '../assets/phone.svg';
 import UserGroupIcon from '../assets/user-group.svg';
-import { action } from '@storybook/addon-actions';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 export default {
   title: 'Inputs',
+  decorators: [withKnobs],
 };
 
 export const mailInput = () => (
-  <InputContainer>
-    <img src={EmailAtIcon} />
-    <InputField type="email" placeholder="E-mail" onChange={action('write')} />
-  </InputContainer>
+  <>
+    <InputField
+      type="email"
+      placeholder="E-mail"
+      src={EmailAtIcon}
+      value={text('')}
+    />
+  </>
 );
 
 export const passwordInput = () => (
-  <InputContainer>
-    <img src={PasswordIcon} />
+  <>
     <InputField
       type="password"
       placeholder="Password"
-      onChange={action('write')}
+      src={PasswordIcon}
+      value={text('')}
     />
-  </InputContainer>
+  </>
 );
 
 export const userNameInput = () => (
-  <InputContainer>
-    <img src={UserIcon} />
-    <InputField type="text" placeholder="Name" onChange={action('write')} />
-  </InputContainer>
+  <>
+    <InputField
+      type="text"
+      placeholder="Name"
+      src={UserIcon}
+      value={text('')}
+    />
+  </>
 );
 
 export const locationInput = () => (
-  <InputContainer>
-    <img src={LocationIcon} />
+  <>
     <InputField
       type="text"
       placeholder="City, country"
-      onChange={action('write')}
+      src={LocationIcon}
+      value={text('')}
     />
-  </InputContainer>
+  </>
 );
 
 export const ageInput = () => (
-  <InputContainer>
-    <img src={AgeIcon} />
+  <>
     <InputField
-      type="number"
+      type="date"
       placeholder="Date of birth"
-      onChange={action('write')}
+      src={AgeIcon}
+      value={text('')}
     />
-  </InputContainer>
+  </>
 );
 
 export const numberOfGuestsInput = () => (
-  <InputContainer>
-    <img src={UserGroupIcon} />
+  <>
     <InputField
       type="number"
       min="0"
       placeholder="Maximum number of guests"
-      onChange={action('write')}
+      src={UserGroupIcon}
+      value={text('')}
     />
-  </InputContainer>
+  </>
 );
 
 export const phoneContactInput = () => (
-  <InputContainer>
-    <img src={PhoneIcon} />
+  <>
     <InputField
       type="number"
-      min="0"
       placeholder="Phone"
-      onChange={action('write')}
+      src={PhoneIcon}
+      value={text('')}
     />
-  </InputContainer>
+  </>
 );
 
 export const mailContactInput = () => (
-  <InputContainer>
-    <img src={EmailIcon} />
-    <InputField type="email" placeholder="E-mail" onChange={action('write')} />
-  </InputContainer>
+  <>
+    <InputField
+      type="email"
+      placeholder="E-mail"
+      src={EmailIcon}
+      value={text('')}
+    />
+  </>
 );
