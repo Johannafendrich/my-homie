@@ -1,6 +1,8 @@
+import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
-const Button = styled.button`
+const Buttons = styled.button`
   background-color: #8645ff;
   color: white;
   padding: 12px;
@@ -8,7 +10,7 @@ const Button = styled.button`
   border-radius: 20px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 16%);
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: Oswald, sans-serif;
   font-weight: bold;
   cursor: pointer;
@@ -18,4 +20,24 @@ const Button = styled.button`
     box-shadow: 0px 10px 15px rgba(134, 69, 255, 60%);
   }
 `;
+
+const ButtonSize = styled.div`
+  display: flex;
+  justify-content: center;
+  > * {
+    flex-basis: 50%;
+  }
+`;
+
+const Button = ({ label, onClick }) => (
+  <ButtonSize>
+    <Buttons onClick={(event) => onClick(event)}>{label}</Buttons>
+  </ButtonSize>
+);
+
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+};
+
 export default Button;
