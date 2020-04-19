@@ -17,7 +17,6 @@ const DropdownMenu = styled.select`
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  align-item: baseline;
   min-height: 47px;
   border: 1.5px solid #707070;
   border-radius: 5px;
