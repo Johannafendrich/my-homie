@@ -5,14 +5,13 @@ import PropTypes from 'prop-types';
 const Buttons = styled.button`
   background-color: #8645ff;
   color: white;
-  padding: 12px;
+  padding: 0.7rem;
   border: none;
   border-radius: 20px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 16%);
   text-transform: uppercase;
-  font-size: 1rem;
-  font-family: Oswald, sans-serif;
-  font-weight: bold;
+  font: bold 0.8rem 'Oswald', sans-serif;
+
   cursor: pointer;
 
   &:active {
