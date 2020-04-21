@@ -55,26 +55,25 @@ const Input = styled.input`
 
 function MultiSelectInput() {
   const [tags, setTags] = React.useState([]);
-  const deleteTags = (valueDelete) => {
-    setTags(tags.filter((value) => value != valueDelete));
-  };
   const addTags = (event) => {
-    if (event.key === 'Enter' && event.target.value !== '') {
+    if (event.key === 'Enter' && event.target.index !== '') {
       setTags([...tags, event.target.value]);
       event.target.value = '';
     }
   };
-
+  const deleteTags = (index) => {
+    setTags([...tags.filter((tag) => tags.indexOf(tag) != index)]);
+  };
   return (
     <InputWrapper>
       <Input
         type="text"
-        placeholder="Press enter to add your Hobbies"
+        placeholder="Press enter to add hobbies"
         onKeyUp={addTags}
       />
       <TagContainer>
-        {tags.map((tag, value) => (
-          <Option key={value} onClick={() => deleteTags(value)}>
+        {tags.map((tag, index) => (
+          <Option key={index} onClick={() => deleteTags(index)}>
             {tag}
             <CloseIcon />
           </Option>
@@ -83,4 +82,5 @@ function MultiSelectInput() {
     </InputWrapper>
   );
 }
+
 export default MultiSelectInput;
