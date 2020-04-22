@@ -55,7 +55,7 @@ const Input = styled.input`
 
 function MultiSelectInput() {
   const [tags, setTags] = React.useState([]);
-  const addTags = (event) => {
+  const handleKeyUp = (event) => {
     if (event.key === 'Enter' && event.target.index !== '') {
       setTags([...tags, event.target.value]);
       event.target.value = '';
@@ -69,7 +69,7 @@ function MultiSelectInput() {
       <Input
         type="text"
         placeholder="Press enter to add hobbies"
-        onKeyUp={addTags}
+        onKeyUp={handleKeyUp}
       />
       <TagContainer>
         {tags.map((tag, index) => (
