@@ -20,9 +20,6 @@ const TagContainer = styled.ul`
   border: none;
   margin: 0;
   padding: 0;
-  &:focus {
-    outline: grey;
-  }
 `;
 
 const Option = styled.li`
@@ -41,15 +38,16 @@ const Option = styled.li`
 `;
 
 const Input = styled.input`
-  padding: 5px;
   border: none;
   cursor: pointer;
-  margin-left: 10px;
+  margin-right: 5px;
   font-size: 1rem;
   flex: 1;
-  outline: none;
   &:placeholder {
     color: #9eaebc;
+  }
+  &:focus {
+    outline-color: #9eaebc;
   }
 `;
 
