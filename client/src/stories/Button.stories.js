@@ -1,45 +1,37 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import Button from '../components/Button';
+import Container from '../components/Container';
 import { action } from '@storybook/addon-actions';
-
-const ButtonSize = styled.div`
-  display: flex;
-  justify-content: center;
-  > * {
-    flex-basis: 50%;
-  }
-`;
 
 export default {
   title: 'Buttons',
 };
 export const loginButton = () => (
-  <ButtonSize>
+  <Container>
     <Button onClick={action('link to Login')}>Login</Button>
-  </ButtonSize>
+  </Container>
 );
 
 export const createAccountButton = () => (
-  <ButtonSize>
+  <Container>
     <Button onClick={action('link to Account')}>Create account</Button>
-  </ButtonSize>
+  </Container>
 );
 
 export const profileButton = () => (
-  <ButtonSize>
+  <Container>
     <Button onClick={action('link to Profile')}>To my profile</Button>
-  </ButtonSize>
+  </Container>
 );
 
 export const submitButton = () => (
-  <ButtonSize>
-    <Button onClick={action('clicked')}>Submit</Button>
-  </ButtonSize>
+  <Container>
+    <Button onClick={action('link to Profile')}>Submit</Button>
+  </Container>
 );
 
 export const addHomieButton = () => (
-  <ButtonSize>
+  <Container>
     <Button onClick={action('clicked')}>Add as Homie</Button>
-  </ButtonSize>
+  </Container>
 );
