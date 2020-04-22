@@ -30,7 +30,7 @@ const Option = styled.li`
   display: flex;
   color: white;
   border: none;
-  font-family: Roboto sans-serife;
+  font-family: 'Roboto';
   font-size: 1rem;
   text-align: center;
   list-style: none;
