@@ -54,12 +54,12 @@ const Input = styled.input`
 function MultiSelectInput() {
   const [tags, setTags] = React.useState([]);
   const handleKeyUp = (event) => {
-    if (event.key === 'Enter' && event.target.index !== '') {
+    if (event.key === 'Enter' && event.target.value !== '') {
       setTags([...tags, event.target.value]);
       event.target.value = '';
     }
   };
-  const deleteTags = (index) => {
+  const indexToDelete = (index) => {
     setTags([...tags.filter((tag) => tags.indexOf(tag) !== index)]);
   };
   return (
@@ -71,7 +71,7 @@ function MultiSelectInput() {
       />
       <TagContainer>
         {tags.map((tag, index) => (
-          <Option key={index} onClick={() => deleteTags(index)}>
+          <Option key={index} onClick={() => indexToDelete(index)}>
             {tag}
             <CloseIcon />
           </Option>
