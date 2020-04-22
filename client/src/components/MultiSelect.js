@@ -62,7 +62,7 @@ function MultiSelectInput() {
     }
   };
   const deleteTags = (index) => {
-    setTags([...tags.filter((tag) => tags.indexOf(tag) != index)]);
+    setTags([...tags.filter((tag) => tags.indexOf(tag) !== index)]);
   };
   return (
     <InputWrapper>
