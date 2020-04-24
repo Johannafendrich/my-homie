@@ -3,11 +3,10 @@ import styled from '@emotion/styled';
 const BasicCard = styled.div`
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
-  align-items: left;
   min-width: 95%;
-  min-height: 415px;
+  min-height: 410px;
   margin: 0.3rem;
   padding: 1rem;
   background-color: white;
