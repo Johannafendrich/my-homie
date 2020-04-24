@@ -7,7 +7,8 @@ const BasicCard = styled.div`
   align-content: center;
   align-items: left;
   min-width: 95%;
-  margin: 4rem 0.3rem;
+  min-height: 415px;
+  margin: 0.3rem;
   padding: 1rem;
   background-color: white;
   border-radius: 1.5rem;
