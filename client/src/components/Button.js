@@ -4,6 +4,7 @@ const Button = styled.button`
   background-color: #8645ff;
   align-self: flex-end;
   color: white;
+
   padding: 12px;
   margin-top: 50px;
   margin-bottom: 10px;
