@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BasicCard from '../components/BasicCard';
 import Container from '../components/Container';
 import InputField from '../components/Input';
@@ -7,8 +8,9 @@ import PasswordIcon from '../assets/password.svg';
 import Button from '../components/Button';
 import EuropeLogo from '../assets/Logo/Logo';
 import Form from '../components/Form';
+import Supplement from '../components/Supplement';
 
-function LoginForm() {
+function LoginArea() {
   const [userEmail, setUserEmail] = React.useState('');
   const [userPassword, setUserPassword] = React.useState('');
 
@@ -44,9 +46,13 @@ function LoginForm() {
           <Container>
             <Button>Login</Button>
           </Container>
+          <Supplement>
+            {"Don't have an account?"}
+            <Link to="/signUp">{'Sign Up here'}</Link>
+          </Supplement>
         </BasicCard>
       </Form>
     </>
   );
 }
-export default LoginForm;
+export default LoginArea;
