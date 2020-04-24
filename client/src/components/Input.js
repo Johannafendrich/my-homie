@@ -6,6 +6,7 @@ const Input = styled.input`
   border: none;
   cursor: pointer;
   margin-left: 10px;
+  min-width: 270px;
   font-size: 1rem;
   flex: 1;
   &:focus {
@@ -15,15 +16,14 @@ const Input = styled.input`
   }
 `;
 
-export const InputContainer = styled.div`
-  display:flex;
-  flex-direction: row;
-  justify-content flex-start;
-  align-item: baseline;
+const InputContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-item: left;
   border: 1.5px solid #707070;
   border-radius: 5px;
-  padding: 5px 10px;
-  margin: 10px 20px;
+  padding: 10px;
+  margin: 10px 0px;
   outline: none;
 `;
 
