@@ -13,8 +13,8 @@ function App() {
       <GlobalStyles />
       <Main>
         <Switch>
-          <Route exact path="/" component={Login}>
-            <Login></Login>
+          <Route exact path="/">
+            <Login />
           </Route>
           <Route path="/signUp">
             <SignUp />
