@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMutation } from 'react-query';
 import { Link } from 'react-router-dom';
 import BasicCard from '../components/BasicCard';
 import Container from '../components/Container';
@@ -9,20 +10,24 @@ import Button from '../components/Button';
 import EuropeLogo from '../assets/Logo/Logo';
 import Form from '../components/Form';
 import Supplement from '../components/Supplement';
+import addUser from '../api/homies';
 
 function LoginArea() {
   const [userEmail, setUserEmail] = React.useState('');
   const [userPassword, setUserPassword] = React.useState('');
+  const [createNewUser, { error }] = useMutation(addUser);
 
-  function handleSubmit(event) {
-    alert('Welcome Back');
+  async function handleSubmit(event) {
     event.preventDefault();
+    await createNewUser({ userEmail, userPassword });
+    alert('Welcome');
   }
 
   return (
     <>
       <EuropeLogo />
       <Form onSubmit={handleSubmit}>
+        {error && <span>{error.message}</span>}
         <BasicCard>
           <InputField
             type="email"

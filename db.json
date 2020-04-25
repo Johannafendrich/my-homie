@@ -15,18 +15,11 @@
       ]
     },
     {
-      "id": 2,
-      "name": "Tina",
-      "email": "tina.w@test.com",
+      "name": "Martin",
+      "email": "m.kraft@info.com",
       "city": "Cologne",
-      "age": "02/07/1985",
-      "hobbies": ["yoga", "slacklining", "travel"],
-      "activities": [
-        "shopping",
-        "cinema",
-        "discover best restaurants",
-        "partying"
-      ]
+      "age": "13/06/1988",
+      "id": 2
     },
     {
       "id": 3,
@@ -46,6 +39,25 @@
         "meditations",
         "what ever you like to do"
       ]
+    },
+    {
+      "name": "Martin",
+      "email": "m.kraft@info.com",
+      "city": "Cologne",
+      "age": "13/06/1988",
+      "id": 4
+    },
+
+    {
+      "userEmail": "sandra@mail.de",
+      "userPassword": "salut",
+      "id": 5
+    },
+
+    {
+      "userEmail": "robin.wer@mail.de",
+      "userPassword": "save",
+      "id": 6
     }
   ]
 }
