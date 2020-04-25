@@ -1,0 +1,51 @@
+{
+  "homies": [
+    {
+      "id": 1,
+      "name": "Diana",
+      "email": "info@test.com",
+      "city": "Cologne",
+      "age": "04/11/1995",
+      "hobbies": ["dancing", "billiards", "making indie rock music"],
+      "activities": [
+        "geocaching",
+        "visiting markets",
+        "cooking with friends",
+        "cycling"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Tina",
+      "email": "tina.w@test.com",
+      "city": "Cologne",
+      "age": "02/07/1985",
+      "hobbies": ["yoga", "slacklining", "travel"],
+      "activities": [
+        "shopping",
+        "cinema",
+        "discover best restaurants",
+        "partying"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Walter",
+      "email": "walter.u@test.com",
+      "city": "Cologne",
+      "age": "06/02/1992",
+      "hobbies": [
+        "restoring furniture",
+        "freelance photography",
+        "poker",
+        "scuba diving"
+      ],
+      "activities": [
+        "bowling",
+        "walks through the city",
+        "meditations",
+        "what ever you like to do"
+      ]
+    }
+  ]
+}
