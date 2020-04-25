@@ -9,8 +9,8 @@
     "storybook": "cd client && yarn run storybook",
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\" \"yarn run storybook\"",
     "dev:server": "yarn run build && cd .. && yarn start",
-    "server": "nodemon index.js",
-    "start": "node index.js",
+    "server": "nodemon server.js",
+    "start": "node server.js",
     "api": "json-server --watch db.json --port 4000"
   },
   "repository": {
