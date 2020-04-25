@@ -13,7 +13,7 @@ function App() {
       <GlobalStyles />
       <Main>
         <Switch>
-          <Route exact path="/login">
+          <Route exact path="/">
             <Login />
           </Route>
           <Route path="/signUp">

@@ -27,11 +27,16 @@ const InputContainer = styled.div`
   outline: none;
 `;
 
-const InputField = ({ type, placeholder, value, src }) => {
+const InputField = ({ type, placeholder, value, src, onChange }) => {
   return (
     <InputContainer>
       <img src={src} />
-      <Input type={type} placeholder={placeholder} value={value} />
+      <Input
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
     </InputContainer>
   );
 };
@@ -41,6 +46,7 @@ InputField.propTypes = {
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string,
   src: PropTypes.any,
+  onChange: PropTypes.func,
 };
 
 export default InputField;
