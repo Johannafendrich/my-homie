@@ -49,15 +49,11 @@
     },
 
     {
-      "userEmail": "sandra@mail.de",
-      "userPassword": "salut",
+      "email": "hans.b@info.de",
+      "password": "daswer",
+      "name": "hans beyer",
+      "city": "Köln, Deutschland",
       "id": 5
-    },
-
-    {
-      "userEmail": "robin.wer@mail.de",
-      "userPassword": "save",
-      "id": 6
     }
   ]
 }
