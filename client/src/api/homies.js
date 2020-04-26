@@ -1,5 +1,5 @@
 async function addUser(user) {
-  const response = await fetch('api/homies', {
+  const response = await fetch('/api/homies', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
