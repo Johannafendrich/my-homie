@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Profile from '../assets/profile/Tina.jpeg';
 import cameraIcon from '../assets/camera.svg';
+import PropTypes from 'prop-types';
 
 const StyledProfileImg = styled.img`
   height: 100px;
@@ -39,14 +40,19 @@ const AvatarContainer = styled.div`
   justify-content: center;
   align-items: flex-end;
 `;
-
-const Avatar = () => (
-  <AvatarContainer>
-    <UploadImage>
-      <img src={cameraIcon} />
-    </UploadImage>
-    <StyledProfileImg />
-  </AvatarContainer>
-);
+const Avatar = ({ onClick }) => {
+  return (
+    <AvatarContainer>
+      <UploadImage onClick={onClick}>
+        <img src={cameraIcon} />
+      </UploadImage>
+      <StyledProfileImg />
+    </AvatarContainer>
+  );
+};
 
 export default Avatar;
+
+Avatar.propTypes = {
+  onClick: PropTypes.func,
+};
