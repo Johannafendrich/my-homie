@@ -59,8 +59,10 @@ function MultiSelectInput() {
       event.target.value = '';
     }
   };
-  const indexToDelete = (index) => {
-    setTags([...tags.filter((tag) => tags.indexOf(tag) !== index)]);
+
+  const handleRemove = () => {
+    tags.splice(tags);
+    setTags([...tags]);
   };
   return (
     <InputWrapper>
@@ -70,8 +72,8 @@ function MultiSelectInput() {
         onKeyUp={handleKeyUp}
       />
       <TagContainer>
-        {tags.map((tag, index) => (
-          <Option key={index} onClick={() => indexToDelete(index)}>
+        {tags.map((tag) => (
+          <Option key={tag.id} onClick={handleRemove}>
             {tag}
             <CloseIcon />
           </Option>
