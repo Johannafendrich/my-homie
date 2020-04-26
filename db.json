@@ -1,0 +1,63 @@
+{
+  "homies": [
+    {
+      "id": 1,
+      "name": "Diana",
+      "email": "info@test.com",
+      "city": "Cologne",
+      "age": "04/11/1995",
+      "hobbies": ["dancing", "billiards", "making indie rock music"],
+      "activities": [
+        "geocaching",
+        "visiting markets",
+        "cooking with friends",
+        "cycling"
+      ]
+    },
+    {
+      "name": "Martin",
+      "email": "m.kraft@info.com",
+      "city": "Cologne",
+      "age": "13/06/1988",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Walter",
+      "email": "walter.u@test.com",
+      "city": "Cologne",
+      "age": "06/02/1992",
+      "hobbies": [
+        "restoring furniture",
+        "freelance photography",
+        "poker",
+        "scuba diving"
+      ],
+      "activities": [
+        "bowling",
+        "walks through the city",
+        "meditations",
+        "what ever you like to do"
+      ]
+    },
+    {
+      "name": "Martin",
+      "email": "m.kraft@info.com",
+      "city": "Cologne",
+      "age": "13/06/1988",
+      "id": 4
+    },
+
+    {
+      "userEmail": "sandra@mail.de",
+      "userPassword": "salut",
+      "id": 5
+    },
+
+    {
+      "userEmail": "robin.wer@mail.de",
+      "userPassword": "save",
+      "id": 6
+    }
+  ]
+}
