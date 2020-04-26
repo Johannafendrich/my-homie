@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMutation } from 'react-query';
 import { Link } from 'react-router-dom';
 import BasicCard from '../components/BasicCard';
 import Container from '../components/Container';
@@ -11,28 +12,32 @@ import Button from '../components/Button';
 import EuropeLogo from '../assets/Logo/Logo';
 import Form from '../components/Form';
 import Supplement from '../components/Supplement';
+import addUser from '../api/homies';
 
 function SignUpArea() {
-  const [userEmail, setUserEmail] = React.useState('');
-  const [userPassword, setUserPassword] = React.useState('');
-  const [userName, setUserName] = React.useState('');
-  const [userCity, setUserCity] = React.useState('');
+  const [email, setUserEmail] = React.useState('');
+  const [password, setUserPassword] = React.useState('');
+  const [name, setUserName] = React.useState('');
+  const [city, setUserCity] = React.useState('');
+  const [createNewUser, { error }] = useMutation(addUser);
 
   async function handleSubmit(event) {
     event.preventDefault();
-    alert(`Hi ${userName}, welcome to the community`);
+    await createNewUser({ email, password, name, city });
+    alert(`Hi ${name}, welcome to the community`);
   }
 
   return (
     <>
       <EuropeLogo />
       <Form onSubmit={handleSubmit}>
+        {error && <span>{error.message}</span>}
         <BasicCard>
           <InputField
             type="text"
             placeholder="Name"
             src={UserIcon}
-            value={userName}
+            value={name}
             onChange={(event) => {
               setUserName(event.target.value);
             }}
@@ -42,7 +47,7 @@ function SignUpArea() {
             type="text"
             placeholder="City, country"
             src={LocationIcon}
-            value={userCity}
+            value={city}
             onChange={(event) => {
               setUserCity(event.target.value);
             }}
@@ -52,7 +57,7 @@ function SignUpArea() {
             type="email"
             placeholder="E-mail"
             src={EmailAtIcon}
-            value={userEmail}
+            value={email}
             onChange={(event) => {
               setUserEmail(event.target.value);
             }}
@@ -61,7 +66,7 @@ function SignUpArea() {
             type="password"
             placeholder="Password"
             src={PasswordIcon}
-            value={userPassword}
+            value={password}
             onChange={(event) => {
               setUserPassword(event.target.value);
             }}
