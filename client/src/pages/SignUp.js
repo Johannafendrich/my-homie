@@ -76,8 +76,8 @@ function SignUpArea() {
             <Button>Create account</Button>
           </Container>
           <Supplement>
-            {'Already have an account?'}
-            <Link to="/">{'Login here'}</Link>
+            <span>Already have an account?</span>
+            <Link to="/">Login here</Link>
           </Supplement>
         </BasicCard>
       </Form>
