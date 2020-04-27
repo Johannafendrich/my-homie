@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Profile from '../assets/profile/Tina.jpeg';
 import cameraIcon from '../assets/camera.svg';
 import PropTypes from 'prop-types';
 
-const StyledProfileImg = styled.img`
+const ProfileImg = styled.img`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-image: url(${Profile});
   border: 4px solid #8645ff;
   background-size: cover;
   background-position: -15px 0px;
@@ -40,13 +38,13 @@ const AvatarContainer = styled.div`
   justify-content: center;
   align-items: flex-end;
 `;
-const Avatar = ({ onClick }) => {
+const Avatar = ({ onClick, src }) => {
   return (
     <AvatarContainer>
       <UploadImage onClick={onClick}>
         <img src={cameraIcon} />
       </UploadImage>
-      <StyledProfileImg />
+      <ProfileImg src={src}></ProfileImg>
     </AvatarContainer>
   );
 };
@@ -55,4 +53,5 @@ export default Avatar;
 
 Avatar.propTypes = {
   onClick: PropTypes.func,
+  src: PropTypes.any,
 };
