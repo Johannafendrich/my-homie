@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import CloseIcon from '../assets/CloseIcon';
+import PropTypes from 'prop-types';
 
 const InputWrapper = styled.div`
   display: flex;
@@ -51,29 +52,39 @@ const Input = styled.input`
   }
 `;
 
-function MultiSelectInput() {
-  const [tags, setTags] = React.useState([]);
+function MultiSelectInput({ value, onChange }) {
+  const [inputValue, setInputValue] = React.useState('');
+
   const handleKeyUp = (event) => {
-    if (event.key === 'Enter' && event.target.value !== '') {
-      setTags([...tags, event.target.value]);
-      event.target.value = '';
+    const normalizedValue = event.target.value.trim().toLowerCase();
+    if (event.key === 'Enter' && normalizedValue !== '') {
+      if (value.includes(normalizedValue)) {
+        return alert('already exists');
+      }
+      onChange([...value, normalizedValue]);
+      setInputValue('');
     }
   };
 
-  const handleRemove = () => {
-    tags.splice(tags);
-    setTags([...tags]);
+  const handleRemove = (tag) => {
+    const tagsClone = [...value];
+    const index = tagsClone.indexOf(tag);
+    tagsClone.splice(index, 1);
+    onChange(tagsClone);
   };
+
   return (
     <InputWrapper>
       <Input
         type="text"
         placeholder="Press enter to add hobbies"
+        value={inputValue}
+        onChange={(event) => setInputValue(event.target.value)}
         onKeyUp={handleKeyUp}
       />
       <TagContainer>
-        {tags.map((tag) => (
-          <Option key={tag.id} onClick={handleRemove}>
+        {value.map((tag) => (
+          <Option key={tag} onClick={() => handleRemove(tag)}>
             {tag}
             <CloseIcon />
           </Option>
@@ -83,4 +94,8 @@ function MultiSelectInput() {
   );
 }
 
+MultiSelectInput.propTypes = {
+  value: PropTypes.array,
+  onChange: PropTypes.func,
+};
 export default MultiSelectInput;
