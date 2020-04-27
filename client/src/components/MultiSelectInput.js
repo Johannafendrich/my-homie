@@ -52,7 +52,7 @@ const Input = styled.input`
   }
 `;
 
-function MultiSelectInput({ value, onChange }) {
+function MultiSelectInput({ value, onChange, placeholder }) {
   const [inputValue, setInputValue] = React.useState('');
 
   const handleKeyUp = (event) => {
@@ -77,7 +77,7 @@ function MultiSelectInput({ value, onChange }) {
     <InputWrapper>
       <Input
         type="text"
-        placeholder="Press enter to add hobbies"
+        placeholder={placeholder}
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
         onKeyUp={handleKeyUp}
@@ -97,5 +97,6 @@ function MultiSelectInput({ value, onChange }) {
 MultiSelectInput.propTypes = {
   value: PropTypes.array,
   onChange: PropTypes.func,
+  placeholder: PropTypes.string,
 };
 export default MultiSelectInput;
