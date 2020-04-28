@@ -13,6 +13,7 @@ import EuropeLogo from '../assets/Logo/Logo';
 import Form from '../components/Form';
 import Supplement from '../components/Supplement';
 import addUser from '../api/homies';
+import Background from '../components/Background';
 
 function SignUpArea() {
   const [email, setUserEmail] = React.useState('');
@@ -77,10 +78,11 @@ function SignUpArea() {
           </Container>
           <Supplement>
             <span>Already have an account?</span>
-            <Link to="/">Login here</Link>
+            <Link to="/login">Login here</Link>
           </Supplement>
         </BasicCard>
       </Form>
+      <Background />
     </>
   );
 }
