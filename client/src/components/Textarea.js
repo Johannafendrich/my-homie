@@ -1,18 +1,34 @@
+import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
-const Textarea = styled.textarea`
-  background-color: white;
-  color: #323338;
-  text-align: left;
-  width: 269px;
-  border: 1.5px solid #707070;
-  border-radius: 5px;
-  font: Roboto 1rem regular;
-  cursor: pointer;
-  padding: 5px;
-  outline: none;
-  resize: vertical;
-  ::placeholder {
-    color: #9EAEBC;
+const TextareaInput = styled.textarea`
+border: 1.5px solid #707070;
+border-radius: 5px;
+cursor: pointer;
+padding: 5px;
+margin: 10px 0px;
+min-width: 270px;
+font-size: 1rem;
+flex: 1;
+&:focus {
+  outline-color: #9eaebc;
+&:placeholder {
+      color: #9eaebc;
+}
 `;
+
+const Textarea = ({ placeholder, value, onChange }) => (
+  <TextareaInput
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
+  ></TextareaInput>
+);
 export default Textarea;
+
+Textarea.propTypes = {
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};
