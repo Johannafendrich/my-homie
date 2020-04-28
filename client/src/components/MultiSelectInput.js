@@ -7,11 +7,12 @@ const InputWrapper = styled.div`
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
-  align-items: center;
+  align-items: left;
+  justify-content: flex-start;
   border: 1.5px solid #707070;
   border-radius: 5px;
-  padding: 5px 10px;
-  margin: 10px 20px;
+  padding: 10px;
+  margin: 10px 0px;
 `;
 
 const TagContainer = styled.ul`
@@ -41,7 +42,7 @@ const Option = styled.li`
 const Input = styled.input`
   border: none;
   cursor: pointer;
-  margin-right: 5px;
+  margin-left: 10px;
   font-size: 1rem;
   flex: 1;
   &:placeholder {
@@ -52,7 +53,7 @@ const Input = styled.input`
   }
 `;
 
-function MultiSelectInput({ value, onChange, placeholder }) {
+function MultiSelectInput({ value, onChange, placeholder, src }) {
   const [inputValue, setInputValue] = React.useState('');
 
   const handleKeyUp = (event) => {
@@ -75,6 +76,7 @@ function MultiSelectInput({ value, onChange, placeholder }) {
 
   return (
     <InputWrapper>
+      <img src={src} />
       <Input
         type="text"
         placeholder={placeholder}
@@ -98,5 +100,6 @@ MultiSelectInput.propTypes = {
   value: PropTypes.array,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
+  src: PropTypes.any,
 };
 export default MultiSelectInput;

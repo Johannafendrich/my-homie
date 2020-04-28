@@ -1,5 +1,8 @@
 import React from 'react';
 import MultiSelectInput from '../components/MultiSelectInput';
+import HobbyIcon from '../assets/heart.svg';
+import ActivitiyIcon from '../assets/sun.svg';
+import LanguageIcon from '../assets/language.svg';
 
 export default {
   title: 'MultiSelectInput',
@@ -12,6 +15,7 @@ export const Hobbies = () => {
     <MultiSelectInput
       value={hobbies}
       onChange={setHobbies}
+      src={HobbyIcon}
       placeholder={'Press enter to add your hobbies'}
     />
   );
@@ -24,7 +28,8 @@ export const Activities = () => {
     <MultiSelectInput
       value={activities}
       onChange={setActivities}
-      placeholder={'Press enter to add your favorite activities'}
+      src={ActivitiyIcon}
+      placeholder={'Press enter to add activities'}
     />
   );
 };
@@ -36,6 +41,7 @@ export const Languages = () => {
     <MultiSelectInput
       value={language}
       onChange={setLanguage}
+      src={LanguageIcon}
       placeholder={'Press enter to add your languages'}
     />
   );
