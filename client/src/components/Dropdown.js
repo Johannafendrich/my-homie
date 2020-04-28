@@ -38,8 +38,8 @@ function Dropdown({ data, placeholder, src }) {
         <option value="" disabled>
           {placeholder}
         </option>
-        {data.map((item, key) => (
-          <option key={key} value={item.value}>
+        {data.map((item) => (
+          <option key={item.value} value={item.value}>
             {item.label}
           </option>
         ))}
