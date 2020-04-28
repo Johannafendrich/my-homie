@@ -1,6 +1,5 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
-import Background from '../assets/background.svg';
 
 function GlobalStyles() {
   return (
@@ -20,10 +19,6 @@ function GlobalStyles() {
             color: #323338;
             display: flex;
             justify-content: center;
-            background-image: url(${Background});
-            background-repeat: no-repeat;
-            background-size: cover;        
-
           }
         }
       `}
