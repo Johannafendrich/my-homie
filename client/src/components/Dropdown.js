@@ -1,28 +1,22 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+import Container from '../components/InputContainer';
 
 const DropdownMenu = styled.select`
   border: none;
-  background: none;
   cursor: pointer;
-  padding: 20px;
-  outline: none;
-  margin-left: 10px;
   font-size: 1rem;
   color: #707070;
-  flex: 1;
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  min-height: 47px;
-  border: 1.5px solid #707070;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: 10px 20px;
   outline: none;
+  margin-left: 5px;
+  background-color: white;
+  flex: 1;
+  &:focus {
+      outline-color: #9eaebc;
+    &:placeholder {
+          color: #9eaebc;
+    }
 `;
 
 function Dropdown({ data, placeholder, src }) {
