@@ -25,10 +25,10 @@ const Textarea = ({ placeholder, value, onChange }) => (
     onChange={onChange}
   ></TextareaInput>
 );
-export default Textarea;
 
 Textarea.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
 };
+export default Textarea;
