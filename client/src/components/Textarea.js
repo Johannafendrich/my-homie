@@ -11,6 +11,7 @@ margin: 10px 0px;
 min-width: 270px;
 font-size: 1rem;
 flex: 1;
+resize: vertical;
 &:focus {
   outline-color: #9eaebc;
 &:placeholder {
@@ -25,10 +26,10 @@ const Textarea = ({ placeholder, value, onChange }) => (
     onChange={onChange}
   ></TextareaInput>
 );
-
 Textarea.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
 };
+
 export default Textarea;
