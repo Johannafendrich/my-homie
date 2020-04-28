@@ -9,6 +9,7 @@ const ProfileImg = styled.img`
   border-radius: 50%;
   border: 4px solid #8645ff;
   background-size: cover;
+  background-color: white;
   background-position: -15px 0px;
 `;
 
@@ -33,7 +34,6 @@ const AvatarContainer = styled.div`
   display: flex;
   width: 140px;
   height: auto;
-  position: relative;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: flex-end;
