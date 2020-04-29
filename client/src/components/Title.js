@@ -16,4 +16,12 @@ export const TitleWhite = styled.h1`
   margin-bottom: 0;
 `;
 
+export const MainTitle = styled.h1`
+  font: 1.9rem 'Anton', sans-serif;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: white;
+  padding: 0;
+  margin-bottom: 0;
+`;
 export default Title;
