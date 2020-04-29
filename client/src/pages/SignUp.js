@@ -13,6 +13,7 @@ import EuropeLogo from '../assets/Logo/Logo';
 import Form from '../components/Form';
 import Supplement from '../components/Supplement';
 import addUser from '../api/homies';
+import Background from '../components/Background';
 
 function SignUpArea() {
   const [email, setUserEmail] = React.useState('');
@@ -29,6 +30,7 @@ function SignUpArea() {
 
   return (
     <>
+      <Background />
       <EuropeLogo />
       <Form onSubmit={handleSubmit}>
         {error && <span>{error.message}</span>}

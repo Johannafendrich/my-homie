@@ -1,17 +1,30 @@
+import React from 'react';
 import styled from '@emotion/styled';
-import StartBackground from '../assets/background.svg';
 
-const Background = styled.div`
+const ContainerOrange = styled.div`
   display: flex;
-  position: fixed;
-  bottom: 10rem;
-  z-index: -1;
   margin: 0;
+  position: fixed;
+  bottom: 5rem;
   width: 100vw;
   height: 30vh;
-  align-content: flex-end;
-  background-image: url(${StartBackground});
-  background-repeat: no-repeat;
-  background-size: cover;
+  justify-content: flex-end;
+  align-intems: flex-start;
+  background-color: #f2ac29;
+  z-index: -5;
 `;
+
+const ContainerGreen = styled.div`
+  background-color: #13dace;
+  height: 20px;
+  width: 100vw;
+  z-index: -5;
+  position: fixed;
+`;
+
+const Background = () => (
+  <ContainerOrange>
+    <ContainerGreen />
+  </ContainerOrange>
+);
 export default Background;
