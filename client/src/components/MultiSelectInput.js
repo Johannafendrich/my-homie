@@ -75,15 +75,17 @@ function MultiSelectInput({ value, onChange, placeholder, src }) {
   };
 
   return (
-    <InputWrapper>
-      <img src={src} />
-      <Input
-        type="text"
-        placeholder={placeholder}
-        value={inputValue}
-        onChange={(event) => setInputValue(event.target.value)}
-        onKeyUp={handleKeyUp}
-      />
+    <>
+      <InputWrapper>
+        <img src={src} />
+        <Input
+          type="text"
+          placeholder={placeholder}
+          value={inputValue}
+          onChange={(event) => setInputValue(event.target.value)}
+          onKeyUp={handleKeyUp}
+        />
+      </InputWrapper>
       <TagContainer>
         {value.map((tag) => (
           <Option key={tag} onClick={() => handleRemove(tag)}>
@@ -92,7 +94,9 @@ function MultiSelectInput({ value, onChange, placeholder, src }) {
           </Option>
         ))}
       </TagContainer>
-    </InputWrapper>
+
+      {/* <div></div> */}
+    </>
   );
 }
 
