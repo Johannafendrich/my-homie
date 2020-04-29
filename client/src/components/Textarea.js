@@ -10,7 +10,6 @@ padding: 5px;
 margin: 10px 0px;
 min-width: 270px;
 font-size: 1rem;
-flex: 1;
 resize: vertical;
 &:focus {
   outline-color: #9eaebc;
