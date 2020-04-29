@@ -15,6 +15,7 @@ const NavContainer = styled.ul`
   padding: 0;
   position: fixed;
   bottom: 0;
+  z-index: 10;
 `;
 
 const NavItem = styled.li`
@@ -26,6 +27,7 @@ const NavItem = styled.li`
   max-width: 160px;
   padding: 6px 12px 8px;
   cursor: pointer;
+  z-index: 10;
 `;
 
 function NavigationBottom({ links, active, onItemClick }) {
