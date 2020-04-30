@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const SVG = styled.svg`
   &:active {
-    transform: translateY(2px) scale(1.2);
+    transform: translateX(2px) scale(0.9);
+    fill: #f2d22e;
   }
-  fill: ${(props) => (props.active ? '#F2D22E' : '#707070')};
 `;
 
 export const Homie = ({ active }) => {

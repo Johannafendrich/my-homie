@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 const NavContainer = styled.ul`
   display: flex;
@@ -18,7 +19,7 @@ const NavContainer = styled.ul`
   z-index: 10;
 `;
 
-const NavItem = styled.li`
+const NavItem = styled(NavLink)`
   display: flex;
   flex: 1;
   justify-content: center;
@@ -27,7 +28,8 @@ const NavItem = styled.li`
   max-width: 160px;
   padding: 6px 12px 8px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 50;
+  fill: ${(props) => (props.active ? '#F2D22E' : '#707070')};
 `;
 
 function NavigationBottom({ links, active, onItemClick }) {
@@ -38,6 +40,7 @@ function NavigationBottom({ links, active, onItemClick }) {
           key={link.label}
           active={active === link.label}
           onClick={() => onItemClick(link.label)}
+          to={link.navLink}
         >
           <link.Icon active={active === link.label} />
         </NavItem>

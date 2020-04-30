@@ -5,7 +5,7 @@ import Start from './pages/Start';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
-import Profile from './pages/Profile';
+import ProfilePage from './pages/Profile';
 import Main from './components/Main';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/profile">
-            <Profile />
+            <ProfilePage />
           </Route>
         </Switch>
       </Main>
