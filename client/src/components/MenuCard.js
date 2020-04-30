@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-const InputContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -15,7 +15,6 @@ const Card = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  min-width: 300px;
   height: auto;
   margin-top: 0.4rem;
   border-radius: 1.5rem;
@@ -31,17 +30,17 @@ const Img = styled.img`
   position: relative;
 `;
 
-const MenueCard = ({ src, alt }) => (
-  <InputContainer>
+const MenuCard = ({ src, alt }) => (
+  <Container>
     <Card>
       <Img src={src} alt={alt} />
     </Card>
-  </InputContainer>
+  </Container>
 );
 
-MenueCard.propTypes = {
+MenuCard.propTypes = {
   alt: PropTypes.string,
   src: PropTypes.any,
 };
 
-export default MenueCard;
+export default MenuCard;
