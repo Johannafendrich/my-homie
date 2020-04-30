@@ -31,7 +31,7 @@ const Img = styled.img`
   position: relative;
 `;
 
-const MenueCard = ({ src, alt }) => (
+const MenuCard = ({ src, alt }) => (
   <InputContainer>
     <Card>
       <Img src={src} alt={alt} />
@@ -39,9 +39,9 @@ const MenueCard = ({ src, alt }) => (
   </InputContainer>
 );
 
-MenueCard.propTypes = {
+MenuCard.propTypes = {
   alt: PropTypes.string,
   src: PropTypes.any,
 };
 
-export default MenueCard;
+export default MenuCard;

@@ -6,7 +6,7 @@ import Search from '../components/Search';
 import SearchIcon from '../assets/search.svg';
 import { MainTitle } from '../components/Title';
 import { TextIntro } from '../components/Text';
-import MenueCard from '../components/MenueCard';
+import MenuCard from '../components/MenuCard';
 import NavigationBottom from '../components/NavigationBottom';
 import { Homie, Discover, Profile } from '../assets/Icons';
 import YogaImage from '../assets/hobbies/yoga.jpg';
@@ -61,11 +61,11 @@ function Home() {
       <CardWrapper>
         <CardContainer>
           <Title>Hobbies</Title>
-          <MenueCard src={YogaImage}></MenueCard>
+          <MenuCard src={YogaImage}></MenuCard>
         </CardContainer>
         <CardContainer>
           <Title>Activities</Title>
-          <MenueCard src={Cooking}></MenueCard>
+          <MenuCard src={Cooking}></MenuCard>
         </CardContainer>
       </CardWrapper>
       <NavigationBottom
