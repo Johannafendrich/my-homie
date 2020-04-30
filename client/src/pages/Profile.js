@@ -2,14 +2,16 @@ import React from 'react';
 import Header from '../components/Header';
 import ProfileForm from '../components/ProfileForm';
 import ProfileSection from '../components/ProfileSection';
+import BottomNav from '../utils/Navigation';
 
-function Profile() {
+function ProfilePage() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <ProfileSection />
       <ProfileForm />
+      <BottomNav />
     </>
   );
 }
-export default Profile;
+export default ProfilePage;

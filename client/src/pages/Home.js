@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import Header from '../components/Header';
 import SectionHeader from '../components/SectionHeader';
@@ -7,8 +7,7 @@ import SearchIcon from '../assets/search.svg';
 import { MainTitle } from '../components/Title';
 import { TextIntro } from '../components/Text';
 import MenuCard from '../components/MenuCard';
-import NavigationBottom from '../components/NavigationBottom';
-import { Homie, Discover, Profile } from '../assets/Icons';
+import BottomNav from '../utils/Navigation';
 import YogaImage from '../assets/hobbies/yoga.jpg';
 import Cooking from '../assets/hobbies/cooking.jpg';
 import { TitleWhite } from '../components/Title';
@@ -44,8 +43,6 @@ const CardContainer = styled.div`
 `;
 
 function Home() {
-  const [active, setActive] = useState('home');
-
   return (
     <>
       <Header />
@@ -68,25 +65,7 @@ function Home() {
           <MenuCard src={Cooking}></MenuCard>
         </CardContainer>
       </CardWrapper>
-      <NavigationBottom
-        links={[
-          {
-            label: 'Homie',
-            Icon: Homie,
-          },
-
-          {
-            label: 'Discover',
-            Icon: Discover,
-          },
-          {
-            label: 'Profile',
-            Icon: Profile,
-          },
-        ]}
-        value={active}
-        onItemClick={(page) => setActive(page)}
-      />
+      <BottomNav />
     </>
   );
 }
