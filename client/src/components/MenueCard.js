@@ -40,7 +40,6 @@ const MenueCard = ({ src, alt }) => (
 );
 
 MenueCard.propTypes = {
-  title: PropTypes.string,
   alt: PropTypes.string,
   src: PropTypes.any,
 };

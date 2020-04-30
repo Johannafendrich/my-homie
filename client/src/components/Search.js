@@ -61,8 +61,6 @@ function Search({ searchInput, handleSearch, placeholder, src, onClick }) {
 Search.propTypes = {
   searchInput: PropTypes.string,
   handleSearch: PropTypes.func,
-  handleReset: PropTypes.func,
-  searchResult: PropTypes.array,
   placeholder: PropTypes.string,
   src: PropTypes.any,
   onClick: PropTypes.func,
