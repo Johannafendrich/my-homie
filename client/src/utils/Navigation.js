@@ -3,7 +3,7 @@ import NavButtom from '../components/NavigationBottom';
 import { Homie, Discover, Profile } from '../assets/Icons';
 
 const BottomNav = () => {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState('home');
 
   return (
     <NavButtom
@@ -18,12 +18,3 @@ const BottomNav = () => {
   );
 };
 export default BottomNav;
-
-// <NavItem
-//   key={link.label}
-//   active={active === link.label}
-//   onClick={() => onItemClick(link.label)}
-//   to={link.navLink}
-// >
-//   <link.Icon active={active === link.label} />
-// </NavItem>;
