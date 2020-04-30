@@ -8,4 +8,12 @@ export const Text = styled.p`
   margin-left: 0.3rem;
 `;
 
+export const TextIntro = styled.p`
+  color: white;
+  line-height: 1.3;
+  text-align: center;
+  padding: 0 1rem;
+  margin: 5px 0;
+`;
+
 export default Text;
