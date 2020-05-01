@@ -44,8 +44,8 @@ function Dropdown({ data, placeholder, src }) {
 
 Dropdown.propTypes = {
   placeholder: PropTypes.string,
-  data: PropTypes.array.isRequired,
-  src: PropTypes.object,
+  data: PropTypes.array,
+  src: PropTypes.any,
 };
 
 export default Dropdown;
