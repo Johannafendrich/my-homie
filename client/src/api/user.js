@@ -1,5 +1,5 @@
-async function addUser(user) {
-  const response = await fetch('/api/homies', {
+export async function addUser(user) {
+  const response = await fetch('/api/user', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -12,4 +12,3 @@ async function addUser(user) {
   const addedUser = await response.json();
   return addedUser;
 }
-export default addUser;
