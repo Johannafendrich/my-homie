@@ -12,7 +12,7 @@ import Button from '../components/Button';
 import EuropeLogo from '../assets/Logo/Logo';
 import Form from '../components/Form';
 import Supplement from '../components/Supplement';
-import addUser from '../api/homies';
+import { addUser } from '../api/user';
 import Background from '../components/Background';
 
 function SignUpArea() {
