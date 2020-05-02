@@ -1,6 +1,7 @@
 import React from 'react';
 import { useMutation } from 'react-query';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import BasicCard from '../components/BasicCard';
 import Container from '../components/Container';
 import InputField from '../components/Input';
@@ -14,6 +15,7 @@ import { addUser } from '../api/user';
 import Background from '../components/Background';
 
 function LoginArea() {
+  const history = useHistory();
   const [userEmail, setUserEmail] = React.useState('');
   const [userPassword, setUserPassword] = React.useState('');
   const [createNewUser, { error }] = useMutation(addUser);
@@ -21,7 +23,7 @@ function LoginArea() {
   async function handleSubmit(event) {
     event.preventDefault();
     await createNewUser({ userEmail, userPassword });
-    alert('Welcome');
+    history.push('/home');
   }
 
   return (
@@ -54,8 +56,8 @@ function LoginArea() {
             <Button>Login</Button>
           </Container>
           <Supplement>
-            {"Don't have an account?"}
-            <Link to="/signUp">{'Sign Up here'}</Link>
+            Don&apos;t have an account?
+            <Link to="/signUp">Sign Up here</Link>
           </Supplement>
         </BasicCard>
       </Form>

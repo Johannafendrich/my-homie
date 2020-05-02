@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import MainLogo from './logo-europe.svg';
+import Colognelogo from './cologneLogo.svg';
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,6 +12,12 @@ const Wrapper = styled.div`
   margin-top: 0;
   padding-top: 1rem;
 `;
+
+export const CologneLogo = () => (
+  <Wrapper>
+    <img src={Colognelogo} />
+  </Wrapper>
+);
 
 const EuropeLogo = () => (
   <Wrapper>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { useMutation } from 'react-query';
-import addUser from '../api/homies';
+import { addUser } from '../api/user';
 import InputField from '../components/Input';
 import EmailIcon from '../assets/email.svg';
 import AgeIcon from '../assets/age.svg';
@@ -19,6 +19,8 @@ import Dropdown from '../components/Dropdown';
 import MultiSelectInput from '../components/MultiSelectInput';
 import Title from '../components/Title';
 
+import { useHistory } from 'react-router-dom';
+
 const AboutTitle = styled(Title)`
   color: #f2ac29;
 `;
@@ -30,6 +32,7 @@ const ActivitiesTitle = styled(Title)`
 `;
 
 function ProfileForm() {
+  const history = useHistory();
   const [about, setAbout] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
@@ -39,13 +42,17 @@ function ProfileForm() {
   const [activities, setActivities] = React.useState([]);
   const [dropdownValue, setdropdownValue] = React.useState('');
   const [createNewUser, { error }] = useMutation(addUser);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   async function handleDropdown(event) {
     setdropdownValue(event.target.value);
+    setIsLoading(true);
   }
 
   async function handleSubmit(event) {
     event.preventDefault();
+    history.push(`/api/users/${createNewUser.id}/`);
+
     await createNewUser({
       about,
       age,
@@ -56,10 +63,13 @@ function ProfileForm() {
       activities,
     });
   }
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <BasicCard>
-      <Form onSubmit={handleSubmit}>
+      <Form>
         {error && <span>{error.message}</span>}
 
         <AboutTitle>About</AboutTitle>
@@ -144,7 +154,9 @@ function ProfileForm() {
         />
 
         <Container>
-          <Button onClick={handleSubmit}>Submit</Button>
+          <Button onClick={handleSubmit} disabled={isLoading}>
+            Submit
+          </Button>
         </Container>
       </Form>
     </BasicCard>
