@@ -8,6 +8,7 @@ const BasicCard = styled.div`
   min-width: 95%;
   min-height: 410px;
   margin: 0.3rem;
+  margin-bottom: 7rem;
   padding: 1rem;
   background-color: white;
   border-radius: 1.5rem;
