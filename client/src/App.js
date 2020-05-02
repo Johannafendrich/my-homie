@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import ProfilePage from './pages/Profile';
 import Main from './components/Main';
+import Welcome from './pages/Welcome';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/signUp">
             <SignUp />
+          </Route>
+          <Route path="/welcome">
+            <Welcome />
           </Route>
           <Route path="/home">
             <Home />
