@@ -14,6 +14,7 @@ import Form from '../components/Form';
 import Supplement from '../components/Supplement';
 import { addUser } from '../api/user';
 import Background from '../components/Background';
+import { useHistory } from 'react-router-dom';
 
 function SignUpArea() {
   const [email, setUserEmail] = React.useState('');
@@ -21,11 +22,12 @@ function SignUpArea() {
   const [name, setUserName] = React.useState('');
   const [city, setUserCity] = React.useState('');
   const [createNewUser, { error }] = useMutation(addUser);
+  const history = useHistory();
 
   async function handleSubmit(event) {
     event.preventDefault();
     await createNewUser({ email, password, name, city });
-    alert(`Hi ${name}, welcome to the community`);
+    history.push('/welcome');
   }
 
   return (
@@ -79,7 +81,7 @@ function SignUpArea() {
           </Container>
           <Supplement>
             <span>Already have an account?</span>
-            <Link to="/">Login here</Link>
+            <Link to="/login">Login here</Link>
           </Supplement>
         </BasicCard>
       </Form>
