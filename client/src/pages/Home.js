@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import Header from '../components/Header';
 import SectionHeader from '../components/SectionHeader';
 import Search from '../components/Search';
-import SearchIcon from '../assets/search.svg';
 import { MainTitle } from '../components/Title';
 import { TextIntro } from '../components/Text';
 import MenuCard from '../components/MenuCard';
@@ -54,7 +53,7 @@ function Home() {
         </TextIntro>
       </TextContainer>
       <SectionHeader />
-      <Search placeholder="Find your Homie" src={SearchIcon} />
+      <Search />
       <CardWrapper>
         <CardContainer>
           <Title>Hobbies</Title>
