@@ -5,7 +5,7 @@ import PlaceholderAvatar from '../assets/profile/avatarPlaceholder.svg';
 import Text from './Text';
 
 const ProfileImg = styled.img`
-  min-height: 100px;
+  height: 100px;
   width: 100px;
   border-radius: 50%;
   background: url(${PlaceholderAvatar}) no-repeat;
