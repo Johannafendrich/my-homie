@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import cameraIcon from '../assets/camera.svg';
 import PlaceholderAvatar from '../assets/profile/avatarPlaceholder.svg';
+import useAvatar from '../utils/context/useAvatar';
 
 const ProfileImg = styled.img`
   height: 100px;
@@ -56,8 +57,7 @@ const AvatarContainer = styled.div`
   align-items: flex-end;
 `;
 const Avatar = () => {
-  const [image, setImage] = React.useState(null);
-  const [upload, setUpload] = React.useState(true);
+  const { image, setImage } = useAvatar();
 
   const handleImageUpload = async (event) => {
     event.preventDefault();
@@ -65,7 +65,6 @@ const Avatar = () => {
     const formData = new FormData();
     formData.append('file', files[0]);
     formData.append('upload_preset', 'bouybyw8');
-    setUpload(false);
     const uploadedImage = await fetch(
       'https://api.cloudinary.com/v1_1/dqbs4ljft/image/upload',
       {
@@ -79,7 +78,7 @@ const Avatar = () => {
 
   return (
     <AvatarContainer>
-      {upload ? (
+      {!image ? (
         <>
           <ProfileImg src={PlaceholderAvatar} />
           <UploadImage>
@@ -96,5 +95,4 @@ const Avatar = () => {
     </AvatarContainer>
   );
 };
-
 export default Avatar;
