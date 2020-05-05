@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import ProfileForm from '../components/ProfileForm';
-import AddAvatar from '../components/AddAvatar';
+import Avatar from '../components/Avatar';
 import BottomNav from '../utils/Navigation';
 import styled from '@emotion/styled';
 import { TitleWhite } from '../components/Title';
@@ -22,7 +22,7 @@ const ProfileWrapper = styled.div`
   align-content: flex-end;
 `;
 
-const AddAccount = () => {
+const CreateAccount = () => {
   return (
     <>
       <ProfileWrapper>
@@ -33,7 +33,7 @@ const AddAccount = () => {
             <Text>Cologne, Germany</Text>
           </Textwrapper>
         </TitleWhite>
-        <AddAvatar />
+        <Avatar />
       </ProfileWrapper>
       <SectionHeader />
       <Header />
@@ -42,4 +42,4 @@ const AddAccount = () => {
     </>
   );
 };
-export default AddAccount;
+export default CreateAccount;

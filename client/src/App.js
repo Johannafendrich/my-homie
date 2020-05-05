@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import ProfilePage from './pages/Profile';
 import Main from './components/Main';
 import Welcome from './pages/Welcome';
-import AddAccount from './pages/CreateAccount';
+import CreateAccount from './pages/CreateAccount';
 import AvatarProvider from './utils/context/AvatarProvider';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
               <Welcome />
             </Route>
             <Route path="/createAccount">
-              <AddAccount />
+              <CreateAccount />
             </Route>
             <Route path="/home">
               <Home />
