@@ -54,12 +54,11 @@ function ProfileForm() {
       phone,
       gender,
       language,
+      hobbies,
+      activities,
     });
   }
 
-  async function handleDropdown(event) {
-    setGender(event.target.value);
-  }
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -80,9 +79,7 @@ function ProfileForm() {
           value={language}
           src={LanguageIcon}
           placeholder={'Press enter to add your languages'}
-          onChange={(event) => {
-            setLanguage(event.target.value);
-          }}
+          onChange={setLanguage}
         />
         <InputField
           type="text"
@@ -93,28 +90,28 @@ function ProfileForm() {
             setAge(event.target.value);
           }}
         />
+
         <Dropdown
           src={UserGroupIcon}
-          value={gender}
           placeholder="Gender"
-          onChange={() => {
-            setGender(handleDropdown);
-          }}
+          value={gender}
+          onChange={setGender}
           data={[
             {
-              value: 1,
+              value: 'Female',
               label: 'Female',
             },
             {
-              value: 2,
+              value: 'Male',
               label: 'Male',
             },
             {
-              value: 3,
+              value: 'Other',
               label: 'Other',
             },
           ]}
         />
+
         <HobbiesTitle>Hobbies</HobbiesTitle>
         <MultiSelectInput
           value={hobbies}
@@ -122,7 +119,6 @@ function ProfileForm() {
           onChange={setHobbies}
           placeholder={'Press enter to add your hobbies'}
         />
-
         <ActivitiesTitle>Activities</ActivitiesTitle>
         <MultiSelectInput
           value={activities}
