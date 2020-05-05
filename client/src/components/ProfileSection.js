@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Avatar from '../components/Avatar';
-import PlaceholderAvatar from '../assets/profile/avatarPlaceholder.svg';
+import Avatar from './Avatar';
 import { TitleWhite } from '../components/Title';
 import Textwrapper from '../components/TextWrapper';
 import LocationIcon from '../assets/pin-white.svg';
@@ -20,20 +19,21 @@ const ProfileWrapper = styled.div`
   align-content: flex-end;
 `;
 
-const ProfileSection = () => (
-  <>
-    <ProfileWrapper>
-      <TitleWhite>
-        Hello, Tina Walters
-        <Textwrapper>
-          <img src={LocationIcon} />
-          <Text>Cologne, Germany</Text>
-        </Textwrapper>
-      </TitleWhite>
-      <Avatar src={PlaceholderAvatar} />
-    </ProfileWrapper>
-    <SectionHeader />
-  </>
-);
-
+const ProfileSection = () => {
+  return (
+    <>
+      <ProfileWrapper>
+        <TitleWhite>
+          Hello, Tina Walters
+          <Textwrapper>
+            <img src={LocationIcon} />
+            <Text>Cologne, Germany</Text>
+          </Textwrapper>
+        </TitleWhite>
+        <Avatar />
+      </ProfileWrapper>
+      <SectionHeader />
+    </>
+  );
+};
 export default ProfileSection;
