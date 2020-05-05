@@ -18,7 +18,6 @@ import Textarea from '../components/Textarea';
 import Dropdown from '../components/Dropdown';
 import MultiSelectInput from '../components/MultiSelectInput';
 import Title from '../components/Title';
-
 import { useHistory } from 'react-router-dom';
 
 const AboutTitle = styled(Title)`
@@ -37,31 +36,29 @@ function ProfileForm() {
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
   const [age, setAge] = React.useState('');
+  const [gender, setGender] = React.useState('');
+  const [createNewUser, { error }] = useMutation(addUser);
   const [language, setLanguage] = React.useState([]);
   const [hobbies, setHobbies] = React.useState([]);
   const [activities, setActivities] = React.useState([]);
-  const [dropdownValue, setdropdownValue] = React.useState('');
-  const [createNewUser, { error }] = useMutation(addUser);
   const [isLoading, setIsLoading] = React.useState(false);
 
-  async function handleDropdown(event) {
-    setdropdownValue(event.target.value);
-    setIsLoading(true);
-  }
-
   async function handleSubmit(event) {
+    setIsLoading(true);
     event.preventDefault();
-    history.push(`/api/users/${createNewUser.id}/`);
-
+    history.push(`/profile`);
     await createNewUser({
       about,
       age,
       email,
       phone,
+      gender,
       language,
-      hobbies,
-      activities,
     });
+  }
+
+  async function handleDropdown(event) {
+    setGender(event.target.value);
   }
   if (isLoading) {
     return <div>Loading...</div>;
@@ -69,9 +66,8 @@ function ProfileForm() {
 
   return (
     <BasicCard>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         {error && <span>{error.message}</span>}
-
         <AboutTitle>About</AboutTitle>
         <Textarea
           placeholder="Write something about you – what should other Homies know about you?"
@@ -80,12 +76,13 @@ function ProfileForm() {
             setAbout(event.target.value);
           }}
         />
-
         <MultiSelectInput
           value={language}
-          onChange={setLanguage}
           src={LanguageIcon}
-          placeholder={'What languages do you speak?'}
+          placeholder={'Press enter to add your languages'}
+          onChange={(event) => {
+            setLanguage(event.target.value);
+          }}
         />
         <InputField
           type="text"
@@ -98,9 +95,11 @@ function ProfileForm() {
         />
         <Dropdown
           src={UserGroupIcon}
-          value={dropdownValue}
+          value={gender}
           placeholder="Gender"
-          onChange={handleDropdown}
+          onChange={() => {
+            setGender(handleDropdown);
+          }}
           data={[
             {
               value: 1,
@@ -116,26 +115,24 @@ function ProfileForm() {
             },
           ]}
         />
-
         <HobbiesTitle>Hobbies</HobbiesTitle>
         <MultiSelectInput
           value={hobbies}
-          onChange={setHobbies}
           src={HobbyIcon}
-          placeholder={'What are your hobbies?'}
+          onChange={setHobbies}
+          placeholder={'Press enter to add your hobbies'}
         />
 
         <ActivitiesTitle>Activities</ActivitiesTitle>
         <MultiSelectInput
           value={activities}
-          onChange={setActivities}
           src={ActivitiyIcon}
-          placeholder={'What activities do you like?'}
+          placeholder={'Press enter to add activities'}
+          onChange={setActivities}
         />
-
         <Title className="contact">Contact</Title>
         <InputField
-          type="text"
+          type="tel"
           placeholder="Phone"
           src={PhoneIcon}
           value={phone}
@@ -152,11 +149,8 @@ function ProfileForm() {
             setEmail(event.target.value);
           }}
         />
-
         <Container>
-          <Button onClick={handleSubmit} disabled={isLoading}>
-            Submit
-          </Button>
+          <Button disabled={isLoading}>Submit</Button>
         </Container>
       </Form>
     </BasicCard>
