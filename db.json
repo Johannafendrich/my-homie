@@ -6,48 +6,57 @@
       "email": "info@test.com",
       "city": "Cologne",
       "age": "04/11/1995",
-      "gender": "female",
-      "image": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1588503708/uyaqo55cn1brdosoiwgu.jpg"
+      "hobbies": ["dancing", "billiards", "making indie rock music"],
+      "activities": [
+        "geocaching",
+        "visiting markets",
+        "cooking with friends",
+        "cycling"
+      ],
+      "accommodation": false
     },
     {
       "id": 2,
-      "name": "Tim",
-      "emal": "tim.b@info.com",
+      "name": "Ina",
+      "email": "Ina-f@mail.com",
       "city": "Cologne",
-      "age": "02/01/1985",
-      "gender": "male"
-    }
-  ],
-  "hobbies": [
-    {
-      "hobby": "dancing",
-      "userId": 1
-    },
-    {
-      "id": 1,
-      "hobby": "music",
-      "userId": 1
-    },
-    {
-      "id": 1,
-      "hobby": "dancing",
-      "userId": 1
-    }
-  ],
-  "activities": [
-    {
-      "activity": "party",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "activity": "barbeque",
-      "userId": 1
+      "age": "08/06/1998",
+      "hobbies": ["yoga", "skate", "msic", "games"],
+      "activities": ["party", "barhopping", "cooking with friends", "cycling"]
     },
     {
       "id": 3,
-      "activity": "volleyball",
-      "userId": 1
+      "name": "Walter",
+      "email": "walter.u@test.com",
+      "city": "Cologne",
+      "age": "06/02/1992",
+      "hobbies": [
+        "restoring furniture",
+        "freelance photography",
+        "poker",
+        "scuba diving"
+      ],
+      "activities": [
+        "bowling",
+        "walks through the city",
+        "meditations",
+        "what ever you like to do"
+      ]
+    },
+    {
+      "name": "Martin",
+      "email": "m.kraft@info.com",
+      "city": "Cologne",
+      "age": "13/06/1988",
+      "id": 4
+    },
+
+    {
+      "email": "hans.b@info.de",
+      "password": "daswer",
+      "name": "hans beyer",
+      "city": "Köln, Deutschland",
+      "id": 5
     }
   ]
 }
