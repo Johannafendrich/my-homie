@@ -56,9 +56,15 @@ const Input = styled.input`
 function MultiSelectInput({ value, onChange, placeholder, src }) {
   const [inputValue, setInputValue] = React.useState('');
 
-  const handleKeyUp = (event) => {
-    const normalizedValue = event.target.value.trim().toLowerCase();
-    if (event.key === 'Enter' && normalizedValue !== '') {
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const normalizedValue = event.target.value.trim().toLowerCase();
+      if (normalizedValue.length === 0) {
+        return;
+      }
       if (value.includes(normalizedValue)) {
         return alert('already exists');
       }
@@ -83,7 +89,7 @@ function MultiSelectInput({ value, onChange, placeholder, src }) {
           placeholder={placeholder}
           value={inputValue}
           onChange={(event) => setInputValue(event.target.value)}
-          onKeyUp={handleKeyUp}
+          onKeyDown={handleKeyDown}
         />
       </InputWrapper>
       <TagContainer>
@@ -94,8 +100,6 @@ function MultiSelectInput({ value, onChange, placeholder, src }) {
           </Option>
         ))}
       </TagContainer>
-
-      {/* <div></div> */}
     </>
   );
 }
