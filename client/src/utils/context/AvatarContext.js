@@ -3,7 +3,7 @@ import PlaceholderAvatar from '../../assets/profile/avatarPlaceholder.svg';
 
 function noop() {}
 const AvatarContext = createContext({
-  image: { PlaceholderAvatar },
+  image: PlaceholderAvatar,
   setImage: noop,
 });
 export default AvatarContext;
