@@ -19,7 +19,7 @@ const TextContainer = styled.div`
   justify-content: center;
   align-item: center;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 5px;
   margin: 10px 0px;
   outline: none;
 `;
@@ -37,7 +37,7 @@ function WelcomeMessage() {
   const history = useHistory();
 
   function handleClick() {
-    history.push('/profile');
+    history.push('/createAccount');
   }
 
   return (

@@ -1,11 +1,14 @@
 import React from 'react';
+import Header from '../components/Header';
+import ProfileForm from '../components/ProfileForm';
+import Avatar from '../components/Avatar';
+import BottomNav from '../utils/Navigation';
 import styled from '@emotion/styled';
-import Avatar from './Avatar';
 import { TitleWhite } from '../components/Title';
 import Textwrapper from '../components/TextWrapper';
 import LocationIcon from '../assets/pin-white.svg';
 import Text from '../components/Text';
-import SectionHeader from './SectionHeader';
+import SectionHeader from '../components/SectionHeader';
 
 const ProfileWrapper = styled.div`
   display: flex;
@@ -19,7 +22,7 @@ const ProfileWrapper = styled.div`
   align-content: flex-end;
 `;
 
-const ProfileSection = () => {
+const CreateAccount = () => {
   return (
     <>
       <ProfileWrapper>
@@ -33,7 +36,10 @@ const ProfileSection = () => {
         <Avatar />
       </ProfileWrapper>
       <SectionHeader />
+      <Header />
+      <ProfileForm />
+      <BottomNav />
     </>
   );
 };
-export default ProfileSection;
+export default CreateAccount;

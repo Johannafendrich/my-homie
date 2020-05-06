@@ -8,34 +8,41 @@ import Home from './pages/Home';
 import ProfilePage from './pages/Profile';
 import Main from './components/Main';
 import Welcome from './pages/Welcome';
+import CreateAccount from './pages/CreateAccount';
+import AvatarProvider from './utils/context/AvatarProvider';
 
 function App() {
   return (
-    <Router>
-      <GlobalStyles />
-      <Main>
-        <Switch>
-          <Route exact path="/">
-            <Start />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route path="/signUp">
-            <SignUp />
-          </Route>
-          <Route path="/welcome">
-            <Welcome />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/profile">
-            <ProfilePage />
-          </Route>
-        </Switch>
-      </Main>
-    </Router>
+    <AvatarProvider>
+      <Router>
+        <GlobalStyles />
+        <Main>
+          <Switch>
+            <Route exact path="/">
+              <Start />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route path="/signUp">
+              <SignUp />
+            </Route>
+            <Route path="/welcome">
+              <Welcome />
+            </Route>
+            <Route path="/createAccount">
+              <CreateAccount />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/profile">
+              <ProfilePage />
+            </Route>
+          </Switch>
+        </Main>
+      </Router>
+    </AvatarProvider>
   );
 }
 

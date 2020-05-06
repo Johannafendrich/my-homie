@@ -16,11 +16,13 @@
       "accommodation": false
     },
     {
-      "name": "Martin",
-      "email": "m.kraft@info.com",
+      "id": 2,
+      "name": "Ina",
+      "email": "Ina-f@mail.com",
       "city": "Cologne",
-      "age": "13/06/1988",
-      "id": 2
+      "age": "08/06/1998",
+      "hobbies": ["yoga", "skate", "msic", "games"],
+      "activities": ["party", "barhopping", "cooking with friends", "cycling"]
     },
     {
       "id": 3,
