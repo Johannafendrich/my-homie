@@ -12,10 +12,7 @@
     "server": "nodemon server.js",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Johannafendrich/my-homie.git"
-  },
+  "repository": "git+https://github.com/Johannafendrich/my-homie.git",
   "author": "Johanna Fendrich",
   "license": "MIT",
   "bugs": {
@@ -47,5 +44,6 @@
     "express": "^4.17.1",
     "json-server": "^0.16.1",
     "mongodb": "^3.5.5"
-  }
+  },
+  "main": "index.js"
 }
