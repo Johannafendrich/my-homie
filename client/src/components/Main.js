@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
 
-const Main = styled.div`
+const Main = styled.main`
   display: flex;
   width: 100vw;
+  max-with: 600px;
   padding-top: 2rem;
   justify-content: center;
   flex-flow: column wrap;
