@@ -32,17 +32,12 @@ const NavItem = styled(NavLink)`
   fill: ${(props) => (props.active ? '#F2D22E' : '#707070')};
 `;
 
-function NavigationBottom({ links, active, onItemClick }) {
+function NavigationBottom({ links, value }) {
   return (
     <NavContainer>
       {links.map((link) => (
-        <NavItem
-          key={link.label}
-          active={active === link.label}
-          onClick={() => onItemClick(link.label)}
-          to={link.navLink}
-        >
-          <link.Icon active={active === link.label} />
+        <NavItem key={link.label} to={link.navLink}>
+          <link.Icon active={value === link.navLink} />
         </NavItem>
       ))}
     </NavContainer>
@@ -51,8 +46,7 @@ function NavigationBottom({ links, active, onItemClick }) {
 
 NavigationBottom.propTypes = {
   links: PropTypes.array,
-  active: PropTypes.string,
-  onItemClick: PropTypes.func,
+  value: PropTypes.string,
 };
 
 export default NavigationBottom;
