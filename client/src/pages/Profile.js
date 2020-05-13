@@ -14,8 +14,10 @@ import HobbyIcon from '../assets/heart.svg';
 import ActivitiyIcon from '../assets/sun.svg';
 import LanguageIcon from '../assets/language.svg';
 import Form from '../components/Form';
+import { AboutTag, HobbiesTag, ActivitiesTag } from '../components/Tags';
+import { AboutTitle, HobbiesTitle, ActivitiesTitle } from '../components/Title';
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   border: none;
   border-radius: 5px;
@@ -27,44 +29,11 @@ const Container = styled.div`
   min-width: 270px;
 `;
 
-const AboutTitle = styled(Title)`
-  color: #f2ac29;
-`;
-const HobbiesTitle = styled(Title)`
-  color: #f2d22e;
-`;
-const ActivitiesTitle = styled(Title)`
-  color: #8645ff;
-`;
-
-const TextBody = styled(Text)`
+export const TextBody = styled(Text)`
   color: #323338;
   line-height: 1.5;
   margin: 5px;
   font-size: 1rem;
-`;
-const Tag = styled.li`
-  background: #f2d22e;
-  display: flex;
-  color: white;
-  border: none;
-  font-family: 'Roboto';
-  font-size: 1rem;
-  text-align: center;
-  justify-content: center;
-  list-style: none;
-  padding: 4px;
-  margin-left: 10px;
-  border-radius: 10px;
-`;
-const AboutTag = styled(Tag)`
-  background-color: #f2ac29;
-`;
-const HobbiesTag = styled(Tag)`
-  background-color: #f2d22e;
-`;
-const ActivitiesTag = styled(Tag)`
-  background-color: #8645ff;
 `;
 
 function ProfilePage() {
