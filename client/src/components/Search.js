@@ -41,15 +41,20 @@ const SearchSubmit = styled.button`
   }
 `;
 
-function Search({ searchInput, handleSearch, placeholder, src, onClick }) {
+function Search({ value, onChange, placeholder, src, onClick, searchResults }) {
   return (
     <InputWrapper>
       <SearchInput
         type="search"
-        value={searchInput}
+        value={value}
         placeholder={placeholder}
-        onChange={handleSearch}
+        onChange={onChange}
       />
+      <div>
+        {searchResults.map((searchResult) => (
+          <div key={searchResult.id}>{searchResult}</div>
+        ))}
+      </div>
 
       <SearchSubmit onClick={onClick}>
         <img src={src} />
@@ -59,11 +64,12 @@ function Search({ searchInput, handleSearch, placeholder, src, onClick }) {
 }
 
 Search.propTypes = {
-  searchInput: PropTypes.string,
-  handleSearch: PropTypes.func,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
   placeholder: PropTypes.string,
   src: PropTypes.any,
   onClick: PropTypes.func,
+  searchResults: PropTypes.array,
 };
 
 export default Search;

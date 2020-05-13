@@ -32,6 +32,19 @@ const TextContainer = styled.div`
 `;
 
 const Home = () => {
+  const [value, setValue] = React.useState('');
+  const [searchResults, setSearchResults] = React.useState([]);
+
+  async function handleChange(event) {
+    const value = event.target.value;
+    setValue(value);
+
+    const users = await fetch(`/api/users?q=${value}`).then((response) =>
+      response.json()
+    );
+    setSearchResults(users);
+  }
+
   return (
     <>
       <Header />
@@ -43,7 +56,13 @@ const Home = () => {
         </TextIntro>
       </TextContainer>
       <SectionHeader />
-      <Search placeholder="Find your Homie" src={SearchIcon} />
+      <Search
+        value={value}
+        placeholder="Find your Homie"
+        src={SearchIcon}
+        onChange={handleChange}
+        searchResults={searchResults}
+      />
       <Container>
         <HomiesGalllery />
       </Container>
