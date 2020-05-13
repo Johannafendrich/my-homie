@@ -8,7 +8,7 @@ const BottomNav = () => {
   return (
     <NavButtom
       links={[
-        { label: 'Homie', Icon: Homie, navLink: '/homie' },
+        { label: 'Homies', Icon: Homie, navLink: '/homies' },
         { label: 'Discover', Icon: Discover, navLink: '/home' },
         { label: 'Profile', Icon: Profile, navLink: '/profile' },
       ]}

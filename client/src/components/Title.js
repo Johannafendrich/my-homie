@@ -34,4 +34,8 @@ export const HobbiesTitle = styled(Title)`
 export const ActivitiesTitle = styled(Title)`
   color: #8645ff;
 `;
+
+export const HomiesTitle = styled(Title)`
+  color: #13dace;
+`;
 export default Title;
