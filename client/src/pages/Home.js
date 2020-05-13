@@ -6,16 +6,19 @@ import Search from '../components/Search';
 import SearchIcon from '../assets/search.svg';
 import { MainTitle } from '../components/Title';
 import { TextIntro } from '../components/Text';
-import MenuCard from '../components/MenuCard';
 import BottomNav from '../utils/Navigation';
-import YogaImage from '../assets/hobbies/yoga.jpg';
-import Cooking from '../assets/hobbies/cooking.jpg';
-import { TitleWhite } from '../components/Title';
+import HomiesGalllery from '../components/HomiesGallery';
+import Main from '../components/Main';
 
-const Title = styled(TitleWhite)`
-  position: absolute;
-  z-index: 3;
-  margin: 0;
+const Container = styled(Main)`
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-type: both mandatory;
+  scroll-snap-align: center;
+  margin-bottom: 5rem;
   padding: 0;
 `;
 
@@ -23,26 +26,12 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   border: none;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   outline: none;
   justify-content: center;
 `;
 
-const CardWrapper = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  border: none;
-  justify-content: center;
-  outline: none;
-`;
-
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-function Home() {
+const Home = () => {
   return (
     <>
       <Header />
@@ -55,18 +44,12 @@ function Home() {
       </TextContainer>
       <SectionHeader />
       <Search placeholder="Find your Homie" src={SearchIcon} />
-      <CardWrapper>
-        <CardContainer>
-          <Title>Hobbies</Title>
-          <MenuCard src={YogaImage}></MenuCard>
-        </CardContainer>
-        <CardContainer>
-          <Title>Activities</Title>
-          <MenuCard src={Cooking}></MenuCard>
-        </CardContainer>
-      </CardWrapper>
+      <Container>
+        <HomiesGalllery />
+      </Container>
       <BottomNav />
     </>
   );
-}
+};
+
 export default Home;

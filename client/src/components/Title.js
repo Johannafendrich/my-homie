@@ -24,4 +24,18 @@ export const MainTitle = styled.h1`
   padding: 0;
   margin-bottom: 0;
 `;
+
+export const AboutTitle = styled(Title)`
+  color: #f2ac29;
+`;
+export const HobbiesTitle = styled(Title)`
+  color: #f2d22e;
+`;
+export const ActivitiesTitle = styled(Title)`
+  color: #8645ff;
+`;
+
+export const HomiesTitle = styled(Title)`
+  color: #13dace;
+`;
 export default Title;
