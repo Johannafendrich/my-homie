@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { useMutation } from 'react-query';
-import { addUser } from '../api/user';
+import { addUser } from '../api/users';
 import InputField from '../components/Input';
 import EmailIcon from '../assets/email.svg';
 import AgeIcon from '../assets/age.svg';
