@@ -6,10 +6,12 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import ProfilePage from './pages/Profile';
+import Homie from './pages/Homie';
 import Main from './components/Main';
 import Welcome from './pages/Welcome';
 import CreateAccount from './pages/CreateAccount';
 import AvatarProvider from './utils/context/AvatarProvider';
+import UnderConstruction from './pages/Homies';
 
 function App() {
   return (
@@ -36,8 +38,14 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
+            <Route exact path="/homie">
+              <Homie />
+            </Route>
             <Route path="/profile">
               <ProfilePage />
+            </Route>
+            <Route exact path="/homies">
+              <UnderConstruction />
             </Route>
           </Switch>
         </Main>
