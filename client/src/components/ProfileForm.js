@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import { useHistory } from 'react-router-dom';
 import { useMutation } from 'react-query';
 import { addUser } from '../api/users';
 import InputField from '../components/Input';
@@ -18,17 +18,7 @@ import Textarea from '../components/Textarea';
 import Dropdown from '../components/Dropdown';
 import MultiSelectInput from '../components/MultiSelectInput';
 import Title from '../components/Title';
-import { useHistory } from 'react-router-dom';
-
-const AboutTitle = styled(Title)`
-  color: #f2ac29;
-`;
-const HobbiesTitle = styled(Title)`
-  color: #f2d22e;
-`;
-const ActivitiesTitle = styled(Title)`
-  color: #8645ff;
-`;
+import { AboutTitle, HobbiesTitle, ActivitiesTitle } from '../components/Title';
 
 function ProfileForm() {
   const history = useHistory();
@@ -43,19 +33,23 @@ function ProfileForm() {
   const [activities, setActivities] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
 
+  const handleDropdown = (event) => {
+    setGender(event.target.value);
+  };
+
   async function handleSubmit(event) {
     setIsLoading(true);
     event.preventDefault();
     history.push(`/profile`);
     await createNewUser({
       about,
-      age,
-      email,
-      phone,
-      gender,
       language,
+      age,
+      gender,
       hobbies,
       activities,
+      phone,
+      email,
     });
   }
 
@@ -82,8 +76,8 @@ function ProfileForm() {
           onChange={setLanguage}
         />
         <InputField
-          type="text"
-          placeholder="Date of birth mm/dd/yyyy"
+          type="number"
+          placeholder="Date of birth"
           src={AgeIcon}
           value={age}
           onChange={(event) => {
@@ -95,7 +89,7 @@ function ProfileForm() {
           src={UserGroupIcon}
           placeholder="Gender"
           value={gender}
-          onChange={setGender}
+          onChange={handleDropdown}
           data={[
             {
               value: 'Female',

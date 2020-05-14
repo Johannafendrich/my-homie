@@ -1,62 +1,133 @@
 {
   "users": [
     {
-      "id": 1,
+      "name": "Phil",
+      "avatar": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1588507894/vueyueszolxqdhkn264v.jpg",
+      "city": "Frankfurt, Germany",
+      "email": "phil-u@gmx.de",
+      "password": "dasweisskeiner",
+      "about": "I’m an open-minded guy. I like to spend my time with friends and live in a shared flat with 4 people and a lovely dog. I offer a separate bedroom with a double bed for two persons. Shared shower and separate toilet. Fresh towels and bed linen are provided. It’s very important that my Homies feel comfortable, so you are welcome to feel like home. If you have any questions, just let call me.",
+      "language": ["german", "dutch", "english"],
+      "age": "03/09/1986",
+      "gender": "male",
+      "hobbies": ["skate", "my dog", "watching movies"],
+      "activities": ["city tour", "music", "barbeque", "party"],
+      "phone": "+49 157 6224 89 32",
+      "image": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1588503828/mi6ohgzmhvlaglgmszoo.jpg",
+      "id": 1
+    },
+    {
       "name": "Diana",
+      "avatar": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1588927001/fjnc5runa92ljwhmux0j.jpg",
+      "city": "Cologne, Germany",
       "email": "info@test.com",
-      "city": "Cologne",
+      "password": "qasw",
+      "about": "I love to spend my time with friends and like good food. I am living in a 3 room apartment. I'm looking forward to showing you my beautiful Cologne. If you have any questions, just let me know.",
+      "language": ["french", "german", "english"],
       "age": "04/11/1995",
+      "gender": "female",
       "hobbies": ["dancing", "billiards", "making indie rock music"],
       "activities": [
+        "cooking with friends",
         "geocaching",
         "visiting markets",
-        "cooking with friends",
         "cycling"
       ],
-      "accommodation": false
+      "phone": "49 174 555 1795",
+      "image": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589450950/cooking_iaryds.jpg",
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "Ina",
-      "email": "Ina-f@mail.com",
-      "city": "Cologne",
+      "name": "Leonie",
+      "avatar": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589455822/Tina_i87er3.jpg",
+      "city": "Berlin, Germany",
+      "email": "leonie-f@mail.com",
+      "password": "qasw",
+      "about": "get to know me ;)",
+      "language": ["french", "german", "english"],
       "age": "08/06/1998",
-      "hobbies": ["yoga", "skate", "msic", "games"],
-      "activities": ["party", "barhopping", "cooking with friends", "cycling"]
-    },
-    {
-      "id": 3,
-      "name": "Walter",
-      "email": "walter.u@test.com",
-      "city": "Cologne",
-      "age": "06/02/1992",
-      "hobbies": [
-        "restoring furniture",
-        "freelance photography",
-        "poker",
-        "scuba diving"
-      ],
-      "activities": [
-        "bowling",
-        "walks through the city",
-        "meditations",
-        "what ever you like to do"
-      ]
+      "gender": "female",
+      "hobbies": ["yoga", "shopping", "music", "games"],
+      "activities": ["yoga", "singing", "shopping", "cycling"],
+      "phone": "+49 159 555 8186",
+      "image": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589450952/Yoga_q5irg4.jpg",
+      "id": 3
     },
     {
       "name": "Martin",
-      "email": "m.kraft@info.com",
-      "city": "Cologne",
-      "age": "13/06/1988",
+      "avatar": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589451011/Tim_bwklma.jpg",
+      "city": "Frankfurt, Germany",
+      "email": "m.rebmann@gmx.com",
+      "password": "qasw",
+      "about": "get to know me ;)",
+      "language": ["dutch", "german", "english"],
+      "age": "08/06/1998",
+      "gender": "male",
+      "hobbies": [
+        "photography",
+        "poker",
+        "restoring furniture",
+        "scuba diving"
+      ],
+      "activities": [
+        "party",
+        "walks through the city",
+        "meditations",
+        "what ever you like to do"
+      ],
+      "phone": "+49 151 555 1154",
+      "image": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589450952/party_x3lkyv.jpg",
       "id": 4
     },
 
     {
-      "email": "hans.b@info.de",
-      "password": "daswer",
-      "name": "hans beyer",
-      "city": "Köln, Deutschland",
+      "name": "Tina",
+      "avatar": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589451011/Ramona_n8fjgh.jpg",
+      "city": "Cologne, Germany",
+      "email": "tina.w@gmail.com",
+      "password": "dasweisskeiner",
+      "about": "I love to travel",
+      "language": ["german", "japanese", "french"],
+      "age": "06/24/1993",
+      "gender": "female",
+      "hobbies": ["art", "badminton", "music"],
+      "activities": ["markets", "party", "good food"],
+
+      "phone": "+49 163 555 0923",
+      "image": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589450951/arts_ywdinp.jpg",
       "id": 5
+    },
+    {
+      "name": "Akin",
+      "avatar": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589451010/Akin_n1nmbv.jpg",
+      "city": "Cologne, Germany",
+      "email": "akin-lw@gmx.com",
+      "password": "dasweisskeiner",
+      "about": "I have a little daughter and she loves to play outside. I often take part in poetry slam and I always enjoy it.",
+      "language": ["german", "japanese", "french"],
+      "age": "06/24/1993",
+      "gender": "male",
+      "hobbies": ["poetry slams", "outdoor sport", "writing"],
+      "activities": ["poetry slam events", "philosophise"],
+      "phone": "+49 157 345 0178",
+      "image": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589450953/poetry_lxl5wo.jpg",
+      "id": 6
+    },
+    {
+      "name": "Julia",
+      "avatar": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589448598/fu99471bkyfidgh77zn6.jpg",
+      "city": "Cologne, Germany",
+      "email": "july@info.com",
+      "password": "qasw",
+      "about": "I am an open minded person. I like to travel and get to know new people and cultures",
+      "language": ["french", "german", "english"],
+      "age": "07/02/1984",
+      "gender": "female",
+      "hobbies": ["making music", "dancing", "drawing"],
+      "activities": ["dancing", "meet friends", "outdoor sport"],
+      "phone": "+49 2934 34 545",
+      "image": "https://res.cloudinary.com/dqbs4ljft/image/upload/v1589450951/park_lpebik.jpg",
+      "Id": 7
     }
   ]
 }
