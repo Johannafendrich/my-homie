@@ -58,7 +58,10 @@ function ProfilePage() {
 
           <Container>
             <img src={LanguageIcon} />
-            <AboutTag>{user.language}</AboutTag>
+            {user.language &&
+              user.language.map((language) => (
+                <AboutTag key={language}>{language}</AboutTag>
+              ))}
           </Container>
           <Container>
             <img src={AgeIcon} />
@@ -71,12 +74,18 @@ function ProfilePage() {
           <HobbiesTitle>Hobbies</HobbiesTitle>
           <Container>
             <img src={HobbyIcon} />
-            <HobbiesTag>{user.hobbies}</HobbiesTag>
+            {user.hobbies &&
+              user.hobbies.map((hobby) => (
+                <HobbiesTag key={hobby}>{hobby}</HobbiesTag>
+              ))}
           </Container>
           <ActivitiesTitle>Activities</ActivitiesTitle>
           <Container>
             <img src={ActivitiyIcon} />
-            <ActivitiesTag>{user.activities}</ActivitiesTag>
+            {user.activities &&
+              user.activities.map((activity) => (
+                <ActivitiesTag key={activity}>{activity}</ActivitiesTag>
+              ))}
           </Container>
           <Title>Contact</Title>
           <Container>
