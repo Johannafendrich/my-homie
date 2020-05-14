@@ -20,10 +20,10 @@ const DropdownMenu = styled.select`
 `;
 
 function Dropdown({ data, placeholder, src }) {
-  const [dropdownValue, setdropdownValue] = React.useState('');
+  const [dropdownValue, setDropdownValue] = React.useState('');
 
   const handleDropdown = (event) => {
-    setdropdownValue(event.target.value);
+    setDropdownValue(event.target.value);
   };
   return (
     <Container>
@@ -41,11 +41,9 @@ function Dropdown({ data, placeholder, src }) {
     </Container>
   );
 }
-
 Dropdown.propTypes = {
   placeholder: PropTypes.string,
   data: PropTypes.array,
   src: PropTypes.any,
 };
-
 export default Dropdown;

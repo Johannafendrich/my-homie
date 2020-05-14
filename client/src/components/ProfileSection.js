@@ -6,6 +6,7 @@ import Textwrapper from '../components/TextWrapper';
 import LocationIcon from '../assets/pin-white.svg';
 import Text from '../components/Text';
 import SectionHeader from './SectionHeader';
+import { getLatestUser } from '../api/users';
 
 export const ProfileWrapper = styled.div`
   display: flex;
@@ -20,14 +21,22 @@ export const ProfileWrapper = styled.div`
 `;
 
 const ProfileSection = () => {
+  const [user, setUser] = React.useState({});
+
+  React.useEffect(() => {
+    getLatestUser().then((user) => {
+      setUser(user);
+    });
+  }, []);
+
   return (
     <>
       <ProfileWrapper>
         <TitleWhite>
-          Hello, Tina
+          Hi, {user.name}
           <Textwrapper>
             <img src={LocationIcon} />
-            <Text>Cologne, Germany</Text>
+            <Text>{user.city}</Text>
           </Textwrapper>
         </TitleWhite>
         <Avatar />
