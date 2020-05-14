@@ -1,32 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { useHistory } from 'react-router-dom';
 import { getUsers } from '../api/users';
 import MenuCard from './MenuCard';
 import Text from './Text';
-import Title from './Title';
 import YogaMenu from '../assets/hobbies/yoga.jpg';
 import CookingMenu from '../assets/hobbies/cooking.jpg';
-import {
-  Lisa,
-  Tim,
-  Phil,
-  Ramona,
-  Akin,
-  Martin,
-  Tina,
-  Leonie,
-} from '../assets/profile/ProfileImages';
-import {
-  Park,
-  Climbing,
-  Yoga,
-  Dom,
-  Arts,
-  Skate,
-  Poetry,
-  Museum,
-  Party,
-} from '../assets/hobbies/HobbyImages';
 
 const List = styled.div`
   display: flex;
@@ -59,13 +38,27 @@ const Name = styled(Text)`
   padding: 2px;
 `;
 
-const Hobbies = styled(Title)`
+const Hobbies = styled.h3`
   display: flex;
   color: #323338;
   font-size: 1.3rem;
   margin: 0;
-  padding: 10px;
+  padding: 5px;
   word-wrap: break-word;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 150px;
+`;
+const Activities = styled.h3`
+  display: flex;
+  color: #323338;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 5px;
+  word-wrap: break-word;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 150px;
 `;
 
 const TextWrapper = styled.span`
@@ -87,7 +80,32 @@ const Wrapper = styled.div`
   border-radius: 1.5rem;
 `;
 
+const Hobby = styled.span`
+  margin: 0px 4px;
+`;
+
+const Activity = styled.span`
+  margin: 0px 4px;
+`;
+const BackgroundImage = styled.img`
+  width: 185px;
+  height: 120px;
+  border-radius: 24px 24px 0 0;
+  margin-bottom: 4px;
+`;
+
+const ProfileImg = styled.img`
+  height: 74px;
+  width: 74px;
+  border-radius: 50%;
+  background-size: cover;
+  border: 3px solid #8645ff;
+  object-fit: cover;
+  background-color: white;
+`;
+
 const HomiesGalllery = () => {
+  const history = useHistory();
   const [users, setUsers] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -98,7 +116,7 @@ const HomiesGalllery = () => {
   }, []);
 
   function handleOnClick() {
-    alert('Lets get in touch');
+    history.push(`/homie`);
     setIsLoading(true);
   }
   if (isLoading) {
@@ -112,104 +130,48 @@ const HomiesGalllery = () => {
     <>
       <List>
         <MenuCard src={YogaMenu}></MenuCard>
-        <User onClick={handleOnClick}>
-          <Arts />
-          <Wrapper>
-            <Lisa />
-            {users.map((user) => {
-              return (
-                <TextWrapper key={user.id}>
-                  <Hobbies>{user.hobbies}</Hobbies>
+        {users.map((user) => {
+          return (
+            <User key={user.id} onClick={handleOnClick}>
+              <BackgroundImage src={user.image} />
+              <Wrapper>
+                <ProfileImg src={user.avatar} />
+                <TextWrapper>
+                  <Hobbies>
+                    {user.hobbies &&
+                      user.hobbies.map((hobby) => (
+                        <Hobby key={hobby}>{hobby}</Hobby>
+                      ))}
+                  </Hobbies>
                   <Name>{user.name}</Name>
                 </TextWrapper>
-              );
-            })}
-          </Wrapper>
-        </User>
-        <User onClick={handleOnClick}>
-          <Yoga />
-          <Wrapper>
-            <Tina />
-            <TextWrapper>
-              <Hobbies>yoga</Hobbies>
-              <Name>Tina</Name>
-            </TextWrapper>
-          </Wrapper>
-        </User>
-        <User onClick={handleOnClick}>
-          <Poetry />
-          <Wrapper>
-            <Akin />
-            <TextWrapper>
-              <Hobbies>poetry slam</Hobbies>
-              <Name>Akin</Name>
-            </TextWrapper>
-          </Wrapper>
-        </User>
-        <User onClick={handleOnClick}>
-          <Park />
-          <Wrapper>
-            <Leonie />
-            <TextWrapper>
-              <Hobbies>Singing</Hobbies>
-              <Name>Leonie</Name>
-            </TextWrapper>
-          </Wrapper>
-        </User>
-        <User onClick={handleOnClick}>
-          <Climbing />
-          <Wrapper>
-            <Ramona />
-            <TextWrapper>
-              <Hobbies>climbing</Hobbies>
-              <Name>Ramona</Name>
-            </TextWrapper>
-          </Wrapper>
-        </User>
+              </Wrapper>
+            </User>
+          );
+        })}
       </List>
 
       <List>
         <MenuCard src={CookingMenu}></MenuCard>
-        <User onClick={handleOnClick}>
-          <Skate />
-          <Wrapper>
-            <Phil />
-            <TextWrapper>
-              <Hobbies>skating</Hobbies>
-              <Name>Phil</Name>
-            </TextWrapper>
-          </Wrapper>
-        </User>
-        <User onClick={handleOnClick}>
-          <Museum />
-          <Wrapper>
-            <Tina />
-            <TextWrapper>
-              <Hobbies>exhibitions</Hobbies>
-              <Name>Tina</Name>
-            </TextWrapper>
-          </Wrapper>
-        </User>
-        <User onClick={handleOnClick}>
-          <Party />
-          <Wrapper>
-            <Martin />
-            <TextWrapper>
-              <Hobbies>party</Hobbies>
-              <Name>Martin</Name>
-            </TextWrapper>
-          </Wrapper>
-        </User>
-        <User onClick={handleOnClick}>
-          <Dom />
-          <Wrapper>
-            <Tim />
-            <TextWrapper>
-              <Hobbies>architecture</Hobbies>
-              <Name>Tim</Name>
-            </TextWrapper>
-          </Wrapper>
-        </User>
+        {users.map((user) => {
+          return (
+            <User key={user.id} onClick={handleOnClick}>
+              <BackgroundImage src={user.image} />
+              <Wrapper>
+                <ProfileImg src={user.avatar} />
+                <TextWrapper key={user.id}>
+                  <Activities>
+                    {user.activities &&
+                      user.activities.map((activity) => (
+                        <Activity key={activity}>{activity}</Activity>
+                      ))}
+                  </Activities>
+                  <Name>{user.name}</Name>
+                </TextWrapper>
+              </Wrapper>
+            </User>
+          );
+        })}
       </List>
     </>
   );
