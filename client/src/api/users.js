@@ -18,3 +18,9 @@ export async function addUser(user) {
   const addedUser = await response.json();
   return addedUser;
 }
+
+export async function getLatestUser() {
+  const response = await fetch('api/users?_sort=id&_order=desc');
+  const users = await response.json();
+  return users[0];
+}
